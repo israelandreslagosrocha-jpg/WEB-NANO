@@ -1,9 +1,188 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+@layer base {
+  body {
+    opacity: 0;
+    animation: fadeInBody 0.8s ease-in forwards;
+  }
+}
+
+@keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .color-whatsapp {
+    color: #25d366;
+  }
+
+  .bg-whatsapp {
+    background-color: #25d366;
+  }
+
+  .hover-bg-whatsapp:hover {
+    background-color: #128c7e;
+  }
+}
+
 @layer utilities {
   .glass-panel {
     @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+}
+
+@layer components {
+  .specialty-card {
+    height: clamp(320px, 60vw, 450px);
+    min-height: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    will-change: transform;
+  }
+
+  .specialty-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      600px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(255, 255, 255, 0.16),
+      transparent 45%
+    );
+    opacity: 0;
+    transition: opacity 250ms ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .specialty-card.is-active::after {
+    opacity: 1;
+  }
+
+  .specialty-overlay {
+    z-index: 1;
+  }
+
+  .specialty-content {
+    z-index: 3;
+    background: linear-gradient(
+      0deg,
+      rgba(15, 18, 20, 0.72) 0%,
+      rgba(15, 18, 20, 0.4) 38%,
+      rgba(15, 18, 20, 0) 70%
+    );
+  }
+
+  .specialty-title,
+  .specialty-text {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .pill-btn {
+    border-radius: 999px;
+  }
+
+  .interactive-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 200ms ease;
+    will-change: transform;
+  }
+
+  .nav-hero .nav-link {
+    position: relative;
+    transition: color 200ms ease, transform 200ms ease, text-shadow 200ms ease;
+  }
+
+  .nav-hero .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.7);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease;
+  }
+
+  .nav-hero .nav-link.is-hovered {
+    transform: translateY(-1px);
+    text-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .nav-hero .nav-link.is-hovered::after {
+    transform: scaleX(1);
+  }
+
+  .hero-cta-secondary {
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+
+  .hero-cta-secondary.is-hovered {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(255, 255, 255, 0.15);
+  }
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+  .footer-photo {
+    background-image: url("https://res.cloudinary.com/dhgifjpkh/image/upload/v1775261250/footer_ogttmj.png");
+    background-size: cover;
+    background-position: center;
+    filter: none;
+    opacity: 1;
+    transform: scale(1.04);
+  }
+
+  .footer-overlay {
+    background: linear-gradient(180deg, rgba(20, 22, 24, 0.82) 0%, rgba(20, 22, 24, 0.9) 100%);
+    opacity: 0.95;
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    height: clamp(340px, 60vw, 450px);
+  }
+
+  .service-card-bg {
+    position: absolute;
+    inset: 0;
+    background-image: var(--service-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  .service-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(16, 18, 20, 0.65) 0%,
+      rgba(16, 18, 20, 0.55) 55%,
+      rgba(16, 18, 20, 0.35) 100%
+    );
+  }
+
+  @media (max-width: 639px) {
+    .specialty-content {
+      padding: 1.5rem;
+    }
+
+    .service-card {
+      height: clamp(320px, 80vw, 420px);
+    }
   }
 }
 
