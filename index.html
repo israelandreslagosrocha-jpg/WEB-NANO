@@ -4,54 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regulariza, Diseña y Vende | RegularizaPRO</title>
+    <title>Estudio Técnico Especialista en Infraestructura Educativa e Institucional |</title>
     <meta name="description"
-        content="Regulariza, diseña y vende tu propiedad cumpliendo normativa y sin rechazos. Asesoría experta en arquitectura y gestión.">
+        content="Regularización educacional, institucional y residencial. Gestión DOM, SEREMI y MINEDUC para cumplir normativa, evitar rechazos y vender sin riesgos.">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../styles/tailwind.css">
-    <style>
-        body {
-            opacity: 0;
-            animation: fadeInBody 0.8s ease-in forwards;
-        }
-
-        @keyframes fadeInBody {
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Real WhatsApp Color */
-        .color-whatsapp {
-            color: #25D366;
-        }
-
-        .bg-whatsapp {
-            background-color: #25D366;
-        }
-
-        .hover-bg-whatsapp:hover {
-            background-color: #128C7E;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/tailwind.css">
 </head>
 
 <body class="font-sans antialiased text-gray-800 bg-white selection:bg-brand-dark selection:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- NAVBAR ELEGANT -->
     <nav id="navbar"
-        class="fixed w-full z-50 transition-all duration-300 bg-transparent border-b border-transparent top-0 py-3">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
-                <span id="logo-text"
-                    class="text-2xl font-semibold tracking-wide text-white transition-colors duration-300">Regulariza<span
-                        class="font-light">PRO</span></span>
+        class="fixed w-full z-50 transition-all duration-300 bg-transparent border-b border-transparent top-0 h-24">
+        <div class="container mx-auto px-6 flex items-center h-full relative">
+            <a href="index.html" class="logo-badge flex items-center gap-3">
+                <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1775940389/LOGOS_HORIZONTAL_xon0vh.png" alt="LOGOS"
+                    class="logo-size w-auto transition-colors duration-300" />
+                <span class="sr-only">LOGOS</span>
             </a>
 
-            <div class="hidden md:flex items-center gap-10 font-medium text-[15px]">
+            <div class="hidden md:flex items-center gap-10 font-medium text-[15px] navbar-center">
                 <a href="#frentes" class="nav-link text-white hover:opacity-70 transition-opacity">Especialidades</a>
                 <a href="#servicios" class="nav-link text-white hover:opacity-70 transition-opacity">Servicios</a>
                 <a href="#confianza" class="nav-link text-white hover:opacity-70 transition-opacity">Nosotros</a>
@@ -95,49 +90,86 @@
         </div>
     </nav>
 
-    <!-- HERO FULL SCREEN IMAGE -->
-    <header class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-dark">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2600"
-            alt="Arquitectura y Diseño" class="absolute inset-0 w-full h-full object-cover opacity-70">
-
-        <div class="absolute inset-0 bg-brand-dark/50"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-60"></div>
-
-        <div class="container mx-auto px-6 relative z-10 text-center max-w-4xl mt-24">
-
-            <h1
-                class="text-[clamp(2.5rem,6vw,4rem)] font-semibold mb-6 tracking-tight text-white leading-tight animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
-                Regulariza, diseña y vende tu propiedad sin problemas legales
-            </h1>
-
-            <p
-                class="text-[clamp(1.125rem,2.6vw,1.375rem)] text-white/90 mb-4 max-w-2xl mx-auto font-normal leading-relaxed animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100">
-                Te ayudamos a cumplir normativa, obtener permisos y preparar tu propiedad para una venta segura.
-            </p>
-
-            <p
-                class="text-[clamp(1.25rem,2.8vw,1.5rem)] text-white font-medium mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100 relative inline-block">
-                Evita rechazos y pérdidas de dinero desde hoy
-                <span class="absolute -bottom-2 left-0 w-full h-[2px] bg-whatsapp block mt-2 opacity-80"></span>
-            </p>
-
-            <div
-                class="flex flex-col sm:flex-row justify-center items-center gap-5 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-200">
-                <!-- PRIMARY CTA -->
-                <a href="#"
-                    class="pill-btn whatsapp-btn w-full sm:w-auto bg-whatsapp hover-bg-whatsapp text-white px-10 py-5 rounded-full text-[18px] md:text-[20px] font-bold flex justify-center items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105 transition-all order-1 sm:order-1 border-2 border-whatsapp">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-7 h-7">
-                        <path fill="currentColor"
-                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-                    </svg>
-                    Hablar por WhatsApp
+    <!-- HERO SLIDER -->
+    <header class="relative min-h-[90vh] overflow-hidden bg-brand-dark">
+        <div class="hero-slider absolute inset-0">
+            <div class="hero-slider-track">
+                <a href="asesoria-infraestructura-educacional.html" class="hero-slide is-active block cursor-pointer">
+                <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1775945431/INFRAESTRUCTURA_EDUCACIONAL_-_ASESORIA_EDUCACIONAL_sbze9g.png"
+                    alt="Infraestructura educacional" class="hero-slide-image">
+                <div class="hero-slide-filter"></div>
+                <div class="hero-slide-text">
+                    <div class="hero-slide-text-inner">
+                        <p class="hero-slide-copy text-[clamp(1.4rem,3vw,2.2rem)] text-white font-medium leading-tight drop-shadow-[0_6px_18px_rgba(0,0,0,0.45)]">
+                            Te asesoramos en Infraestructura Educacional. Llevamos tu proyecto desde el diseño hasta el Reconocimiento Oficial del Mineduc.
+                        </p>
+                    </div>
+                </div>
                 </a>
-
-                <!-- SECONDARY CTA -->
-                <a href="#servicios"
-                    class="pill-btn hero-cta-secondary w-full sm:w-auto bg-transparent border-2 border-white/60 hover:bg-white/10 hover:border-white text-white px-8 py-5 rounded-full text-[18px] font-semibold transition-all flex justify-center items-center order-2 sm:order-2">
-                    Agendar asesoría
+                <a href="asesoria-arquitectura-habitacional.html" class="hero-slide block cursor-pointer">
+                <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1775945431/ARQUITECTURA_HABITACIONAL_chyape.png"
+                    alt="Arquitectura habitacional" class="hero-slide-image">
+                <div class="hero-slide-filter"></div>
+                <div class="hero-slide-text">
+                    <div class="hero-slide-text-inner">
+                        <p class="hero-slide-copy text-[clamp(1.4rem,3vw,2.2rem)] text-white font-medium leading-tight drop-shadow-[0_6px_18px_rgba(0,0,0,0.45)]">
+                            Proyectamos tus sueños y saneamos tu propiedad bajo la normativa vigente (Ley del Mono).
+                        </p>
+                    </div>
+                </div>
                 </a>
+                <a href="gestion-inmobiliaria.html" class="hero-slide block cursor-pointer">
+                <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1775945431/CORRETAJE_Y_GESTIO%CC%81N_pfer5v.png"
+                    alt="Corretaje y gestion" class="hero-slide-image">
+                <div class="hero-slide-filter"></div>
+                <div class="hero-slide-text">
+                    <div class="hero-slide-text-inner">
+                        <p class="hero-slide-copy text-[clamp(1.4rem,3vw,2.2rem)] text-white font-medium leading-tight drop-shadow-[0_6px_18px_rgba(0,0,0,0.45)]">
+                            Gestion inmobiliaria de alto rendimiento, acompanamiento de confianza de principio a fin
+                        </p>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <button class="hero-slider-btn hero-slider-prev" type="button" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button class="hero-slider-btn hero-slider-next" type="button" aria-label="Siguiente">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+
+        <div class="relative z-20 h-full">
+            <div class="container mx-auto px-6 pt-28">
+                <div class="hero-heading max-w-4xl">
+                    <h1 class="hero-heading-text text-[clamp(2.2rem,4.8vw,3.4rem)] font-semibold tracking-tight text-white leading-tight">
+                        Especialistas en Regularizacion Educacional, Institucional y Residencial
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-cta-bar">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#"
+                        class="pill-btn whatsapp-btn w-full sm:w-auto bg-whatsapp hover-bg-whatsapp text-white px-9 py-4 rounded-full text-[18px] font-bold flex justify-center items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105 transition-all border-2 border-whatsapp">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6">
+                            <path fill="currentColor"
+                                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                        </svg>
+                        Hablar por WhatsApp
+                    </a>
+                    <a href="#servicios"
+                        class="pill-btn hero-cta-secondary w-full sm:w-auto bg-transparent border-2 border-white/60 hover:bg-white/10 hover:border-white text-white px-8 py-4 rounded-full text-[18px] font-semibold transition-all flex justify-center items-center">
+                        Ver servicios
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -146,7 +178,7 @@
     <section class="py-24 bg-white text-brand-dark">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
-                <h2 class="text-3xl md:text-5xl font-semibold mb-4 tracking-tight">El costo de la irregularidad</h2>
+                <h2 class="text-3xl md:text-5xl font-semibold mb-4 tracking-tight">Riesgos normativos que frenan tu proyecto</h2>
                 <div class="w-16 h-1 bg-brand-dark mx-auto mt-6 rounded"></div>
             </div>
 
@@ -162,9 +194,9 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="text-[22px] font-semibold mb-3">Multas por construcciones</h3>
-                    <p class="text-gray-600 text-[16px] leading-relaxed">Riesgos financieros y paralización de obras por
-                        construcciones irregulares no declaradas.</p>
+                    <h3 class="text-[22px] font-semibold mb-3">Observaciones en Reconocimiento Oficial</h3>
+                    <p class="text-gray-600 text-[16px] leading-relaxed">Un error en superficie, accesibilidad o carga de
+                        ocupación puede detener la operación de tu establecimiento.</p>
                 </div>
                 <!-- Tarjeta 2 -->
                 <div
@@ -176,9 +208,9 @@
                                 d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
                         </svg>
                     </div>
-                    <h3 class="text-[22px] font-semibold mb-3">Propiedades estancadas</h3>
-                    <p class="text-gray-600 text-[16px] leading-relaxed">Imposibilidad de vender rápidamente tu
-                        propiedad por problemas legales no resueltos.</p>
+                    <h3 class="text-[22px] font-semibold mb-3">Autorización Sanitaria detenida</h3>
+                    <p class="text-gray-600 text-[16px] leading-relaxed">Flujos de casinos, baños y cocinas fuera de
+                        norma implican rechazos y reprocesos con SEREMI.</p>
                 </div>
                 <!-- Tarjeta 3 (Recuperada) -->
                 <div
@@ -191,9 +223,9 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="text-[22px] font-semibold mb-3">Rechazos en la DOM</h3>
-                    <p class="text-gray-600 text-[16px] leading-relaxed">Trámites demorados, pérdida de dinero y
-                        observaciones infinitas en la Dirección de Obras.</p>
+                    <h3 class="text-[22px] font-semibold mb-3">Ventas caídas por carpeta legal</h3>
+                    <p class="text-gray-600 text-[16px] leading-relaxed">Sin recepción final o regularización, bancos y
+                        tasadores bloquean la venta o bajan drásticamente el precio.</p>
                 </div>
             </div>
 
@@ -212,69 +244,107 @@
         </div>
     </section>
 
-    <!-- FRENTES (Acción y Hover más agresivos) -->
-    <section id="frentes" class="bg-gray-100 py-24">
-        <div class="container mx-auto px-6 max-w-7xl">
+    <section id="confianza" class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-6 max-w-6xl">
             <div class="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
-                <h2 class="text-4xl md:text-5xl font-semibold text-brand-dark tracking-tight">Áreas de Especialidad</h2>
+                <h2 class="text-4xl md:text-5xl font-semibold text-brand-dark">Experiencia técnica con MINEDUC, SEREMI y DOM</h2>
+                <p class="text-gray-600 text-[18px] mt-4 max-w-3xl mx-auto">
+                    Trabajamos con criterios normativos unificados para que tu proyecto educacional o residencial
+                    avance sin observaciones repetitivas ni pérdidas de tiempo.
+                </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Frente 1 (EDUCACION E INSTITUCIONALIDAD) -->
-                <a href="servicios.html"
-                    class="specialty-card block group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:-translate-y-1 transition-transform">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
-                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out">
-                    <div
-                        class="specialty-overlay absolute inset-0 bg-brand-dark/70 group-hover:bg-brand-dark/40 transition-colors duration-500">
-                    </div>
-                    <div class="specialty-content absolute inset-0 p-10 flex flex-col justify-end">
-                        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="specialty-title text-3xl font-bold text-white mb-3 drop-shadow-md">Educación e Institucionalidad
-                            </h3>
-                            <p class="specialty-text text-white/90 font-medium text-[16px] leading-snug drop-shadow-sm">
-                                Obtén permisos, autorizaciones sanitarias y reconocimiento oficial sin rechazos.
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <!-- Frente 2 (ARQUITECTURA RESIDENCIAL) -->
-                <a href="servicios.html"
-                    class="specialty-card block group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:-translate-y-1 transition-transform">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1000"
-                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out">
-                    <div
-                        class="specialty-overlay absolute inset-0 bg-brand-dark/70 group-hover:bg-brand-dark/40 transition-colors duration-500">
-                    </div>
-                    <div class="specialty-content absolute inset-0 p-10 flex flex-col justify-end">
-                        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="specialty-title text-3xl font-bold text-white mb-3 drop-shadow-md">Arquitectura Residencial</h3>
-                            <p class="specialty-text text-white/90 font-medium text-[16px] leading-snug drop-shadow-sm">
-                                Regulariza y amplía tu vivienda cumpliendo normativa vigente.
-                            </p>
-                        </div>
-                    </div>
-                </a>
 
-                <!-- Frente 3 (CORRETAJE Y GESTION) -->
-                <a href="servicios.html"
-                    class="specialty-card block group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:-translate-y-1 transition-transform">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000"
-                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out">
-                    <div
-                        class="specialty-overlay absolute inset-0 bg-brand-dark/70 group-hover:bg-brand-dark/40 transition-colors duration-500">
-                    </div>
-                    <div class="specialty-content absolute inset-0 p-10 flex flex-col justify-end">
-                        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="specialty-title text-3xl font-bold text-white mb-3 drop-shadow-md">Corretaje y Gestión</h3>
-                            <p class="specialty-text text-white/90 font-medium text-[16px] leading-snug drop-shadow-sm">
-                                Deja tu propiedad lista para vender sin problemas legales ni bancarios.
-                            </p>
-                        </div>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-2xl font-semibold text-brand-dark mb-3">Coordinación institucional</h3>
+                    <p class="text-gray-600 text-[16px] leading-relaxed">Alineamos permisos DOM, autorización sanitaria y
+                        Reconocimiento Oficial para avanzar en paralelo.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-2xl font-semibold text-brand-dark mb-3">Revisión técnica preventiva</h3>
+                    <p class="text-gray-600 text-[16px] leading-relaxed">Detectamos riesgos normativos antes de ingresar
+                        carpetas, reduciendo reprocesos y rechazos.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-2xl font-semibold text-brand-dark mb-3">Saneamiento para venta</h3>
+                    <p class="text-gray-600 text-[16px] leading-relaxed">Preparamos la carpeta legal para tasación bancaria
+                        y cierres de compraventa sin sorpresas.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-brand-dark text-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2">Equipo técnico especializado en regularización en Chile</h3>
+                    <p class="text-white/80">Enfocados en infraestructura educativa e institucional con alcance residencial.</p>
+                </div>
+                <a href="#" class="whatsapp-btn inline-flex items-center gap-2 bg-whatsapp hover-bg-whatsapp text-white px-6 py-3 rounded-full font-semibold shadow-md">
+                    Hablar con un especialista
                 </a>
             </div>
         </div>
     </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
+                    <span class="text-sm uppercase tracking-[0.35em] text-brand-dark/70">Educación e Institucionalidad</span>
+                    <h2 class="text-3xl md:text-5xl font-semibold text-brand-dark mt-4 mb-6">
+                        Del diseño al Reconocimiento Oficial
+                    </h2>
+                    <p class="text-gray-600 text-[18px] leading-relaxed mb-6">
+                        Aseguramos el cumplimiento normativo para establecimientos educacionales desde la carpeta
+                        técnica hasta la resolución final. Unificamos criterios de DOM, SEREMI y MINEDUC para evitar
+                        observaciones y retrasos.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                            <h3 class="font-semibold text-brand-dark mb-2">DOM</h3>
+                            <p class="text-gray-600 text-[15px]">Permisos de edificación y recepciones finales con
+                                destino educacional, accesibilidad y carga de ocupación.</p>
+                        </div>
+                        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                            <h3 class="font-semibold text-brand-dark mb-2">SEREMI de Salud</h3>
+                            <p class="text-gray-600 text-[15px]">Autorización sanitaria, flujos de casinos y baños
+                                según normativa vigente.</p>
+                        </div>
+                        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                            <h3 class="font-semibold text-brand-dark mb-2">SEREMI de Educación</h3>
+                            <p class="text-gray-600 text-[15px]">Gestión de expedientes para obtención o
+                                actualización del Reconocimiento Oficial.</p>
+                        </div>
+                        <div class="bg-brand-dark text-white rounded-xl p-5">
+                            <h3 class="font-semibold mb-2">No pongas en riesgo tu R.O.</h3>
+                            <p class="text-white/80 text-[15px]">Un error en superficies o accesibilidad puede
+                                paralizar el proyecto educativo. Te acompañamos en cada validación técnica.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-150">
+                    <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8 shadow-sm">
+                        <h3 class="text-2xl font-semibold text-brand-dark mb-4">Infraestructura que cumple y opera</h3>
+                        <p class="text-gray-600 text-[16px] leading-relaxed mb-6">
+                            Garantizamos un proceso ordenado con revisión técnica, levantamiento preciso y
+                            acompañamiento hasta la aprobación. Tu establecimiento opera legalmente y sin riesgos de
+                            cierre.
+                        </p>
+                        <ul class="space-y-3 text-gray-700 text-[16px]">
+                            <li>✔ Coordinación documental entre municipalidad, SEREMI y MINEDUC.</li>
+                            <li>✔ Carpetas técnicas completas antes de ingresar a revisión.</li>
+                            <li>✔ Acompañamiento en observaciones y subsanaciones.</li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="#" class="whatsapp-btn inline-flex items-center gap-2 bg-whatsapp hover-bg-whatsapp text-white px-6 py-3 rounded-full font-semibold shadow-md">
+                                Evaluar proyecto educacional
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section id="servicios" class="py-24 bg-white">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
@@ -282,16 +352,16 @@
             </div>
 
             <div
-                class="grid md:grid-cols-2 gap-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100">
+                class="grid md:grid-cols-3 gap-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100">
                 <div
                     class="service-card interactive-card bg-gray-50 p-8 rounded-xl border border-gray-100 flex flex-col justify-between group shadow-sm hover:shadow-md transition-shadow"
-                    style="--service-bg: url('https://res.cloudinary.com/dhgifjpkh/image/upload/v1775260417/levantamiento_arquitectonico_psxk4d.png')">
+                    style="--service-bg: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&q=80&w=1200')">
                     <div class="service-card-bg"></div>
                     <div class="service-card-overlay"></div>
                     <div class="relative z-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Levantamiento Arquitectónico</h4>
-                        <p class="text-white/90 text-[16px] mb-6 leading-relaxed drop-shadow-sm">Medición métrica exacta y generación
-                            de planos actualizados de tu propiedad, fundamental para cualquier trámite legal.</p>
+                        <h4 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Permisos DOM Educacionales</h4>
+                        <p class="text-white/90 text-[16px] mb-6 leading-relaxed drop-shadow-sm">Recepciones finales y permisos con
+                            destino educacional, accesibilidad universal y carga de ocupación.</p>
                     </div>
                     <a href="servicios.html"
                         class="relative z-10 inline-flex items-center gap-2 text-white font-bold w-fit border-b border-white/70 hover:gap-3 transition-all pb-1">Ver
@@ -300,32 +370,17 @@
 
                 <div
                     class="service-card interactive-card bg-gray-50 p-8 rounded-xl border border-gray-100 flex flex-col justify-between group shadow-sm hover:shadow-md transition-shadow"
-                    style="--service-bg: url('https://res.cloudinary.com/dhgifjpkh/image/upload/v1775260417/excepcion_eja98s.png')">
+                    style="--service-bg: url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1200')">
                     <div class="service-card-bg"></div>
                     <div class="service-card-overlay"></div>
                     <div class="relative z-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Leyes de Excepción (20.898)</h4>
-                        <p class="text-white/90 text-[16px] mb-6 leading-relaxed drop-shadow-sm">Alineamos tu construcción a la "Ley
-                            del Mono" para regularizar garantizando una recepción final sin observaciones.</p>
-                    </div>
-                    <a href="#"
-                        class="whatsapp-btn relative z-10 inline-flex items-center gap-2 text-white font-bold w-fit border-b border-white/70 hover:gap-3 transition-all pb-1">Solicitar
-                        evaluación gratuita</a>
-                </div>
-
-                <div
-                    class="service-card interactive-card bg-gray-50 p-8 rounded-xl border border-gray-100 flex flex-col justify-between group shadow-sm hover:shadow-md transition-shadow"
-                    style="--service-bg: url('https://res.cloudinary.com/dhgifjpkh/image/upload/v1775260417/corretaje_snfayc.png')">
-                    <div class="service-card-bg"></div>
-                    <div class="service-card-overlay"></div>
-                    <div class="relative z-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Venta Inmobiliaria y Corretaje</h4>
-                        <p class="text-white/90 text-[16px] mb-6 leading-relaxed drop-shadow-sm">Filtramos compradores bajo estándares
-                            bancarios y prevenimos caídas del crédito al revisar la propiedad antes.</p>
+                        <h4 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Reconocimiento Oficial (MINEDUC)</h4>
+                        <p class="text-white/90 text-[16px] mb-6 leading-relaxed drop-shadow-sm">Gestión de expedientes para obtención
+                            o actualización del R.O. sin reprocesos.</p>
                     </div>
                     <a href="servicios.html"
                         class="relative z-10 inline-flex items-center gap-2 text-white font-bold w-fit border-b border-white/70 hover:gap-3 transition-all pb-1">Ver
-                        plan de venta</a>
+                        requisitos</a>
                 </div>
 
                 <div
@@ -334,13 +389,43 @@
                     <div class="service-card-bg"></div>
                     <div class="service-card-overlay"></div>
                     <div class="relative z-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Resoluciones Sanitarias SEREMI</h4>
-                        <p class="text-white/90 text-[16px] mb-6 leading-relaxed drop-shadow-sm">Gestión de proyectos institucionales
-                            asegurando flujos autorizados de inicio a fin.</p>
+                        <h4 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Autorización Sanitaria SEREMI</h4>
+                        <p class="text-white/90 text-[16px] mb-6 leading-relaxed drop-shadow-sm">Tramitación sanitaria para casinos,
+                            baños y flujos internos conforme a normativa.</p>
                     </div>
                     <a href="servicios.html"
                         class="relative z-10 inline-flex items-center gap-2 text-white font-bold w-fit border-b border-white/70 hover:gap-3 transition-all pb-1">Ver
                         detalle normativo</a>
+                </div>
+
+                <div
+                    class="service-card interactive-card bg-gray-50 p-8 rounded-xl border border-gray-100 flex flex-col justify-between group shadow-sm hover:shadow-md transition-shadow"
+                    style="--service-bg: url('https://res.cloudinary.com/dhgifjpkh/image/upload/v1775260417/excepcion_eja98s.png')">
+                    <div class="service-card-bg"></div>
+                    <div class="service-card-overlay"></div>
+                    <div class="relative z-10">
+                        <h4 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Regularización Residencial y Ley 20.898</h4>
+                        <p class="text-white/90 text-[16px] mb-6 leading-relaxed drop-shadow-sm">Ampliaciones, obra nueva y Ley del
+                            Mono para evitar multas y facilitar la venta.</p>
+                    </div>
+                    <a href="servicios.html"
+                        class="relative z-10 inline-flex items-center gap-2 text-white font-bold w-fit border-b border-white/70 hover:gap-3 transition-all pb-1">Ver
+                        opciones</a>
+                </div>
+
+                <div
+                    class="service-card interactive-card bg-gray-50 p-8 rounded-xl border border-gray-100 flex flex-col justify-between group shadow-sm hover:shadow-md transition-shadow"
+                    style="--service-bg: url('https://res.cloudinary.com/dhgifjpkh/image/upload/v1775260417/corretaje_snfayc.png')">
+                    <div class="service-card-bg"></div>
+                    <div class="service-card-overlay"></div>
+                    <div class="relative z-10">
+                        <h4 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Corretaje Técnico</h4>
+                        <p class="text-white/90 text-[16px] mb-6 leading-relaxed drop-shadow-sm">Saneamos la carpeta legal antes del
+                            tasador bancario para evitar caídas en la venta.</p>
+                    </div>
+                    <a href="servicios.html"
+                        class="relative z-10 inline-flex items-center gap-2 text-white font-bold w-fit border-b border-white/70 hover:gap-3 transition-all pb-1">Ver
+                        plan de venta</a>
                 </div>
             </div>
         </div>
@@ -348,73 +433,213 @@
 
     <!-- FAQ -->
     <section id="faq" class="py-24 bg-white border-t border-gray-100">
-        <div class="container mx-auto px-6 max-w-3xl">
+        <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
                 <h2 class="text-4xl font-bold text-brand-dark">Preguntas Frecuentes</h2>
             </div>
 
             <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100 space-y-4">
-                <!-- FAQ 1 -->
+                <!-- Asesoria Educacional -->
                 <details
                     class="interactive-card bg-gray-50 border border-gray-200 rounded-lg group shadow-sm hover:shadow-md transition-shadow">
                     <summary
                         class="font-semibold text-[18px] p-6 cursor-pointer flex justify-between items-center text-brand-dark">
-                        ¿Puedo vender mi propiedad sin recepción final?<span
+                        Asesoria Educacional<span
                             class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-2xl">+</span>
                     </summary>
-                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
-                        Poder vender, se puede. Pero la <b>restricción principal será el financiamiento bancario</b>.
-                        Los bancos rechazan dar créditos sobre propiedades con irregularidades no declaradas. Esto te
-                        limita a vender solo a compradores "al contado", lo que baja radicalmente el valor de tu
-                        propiedad (hasta un -30%).
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed space-y-3">
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿Por qué es fundamental contar con asesoría especializada en normativa del Mineduc?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                La normativa educacional es compleja y puede generar <span class="text-red-600 font-semibold">costos y retrasos</span> si no se interpreta bien. Con profesionales que trabajaron dentro del Ministerio de Educación, anticipamos criterios, plazos y observaciones para que tu expediente avance con seguridad.
+                            </div>
+                        </details>
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿Qué trámites puedo realizar con LOGOS para obtener el Reconocimiento Oficial?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                Te representamos ante la Seremi de Educación para obtener Reconocimiento Oficial o Autorización de Funcionamiento. Incluye ampliación de capacidad, ingreso a JECD, creación de niveles o carreras y reconocimiento de locales anexos con una <span class="text-red-600 font-semibold">estrategia documental precisa</span>.
+                            </div>
+                        </details>
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿Qué sucede si mi solicitud es rechazada o tengo observaciones del Ministerio?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                Preparamos recursos de apelación y acompañamiento técnico ante requerimientos del Mineduc. Además, respondemos observaciones de la Superintendencia de Educación para <span class="text-red-600 font-semibold">evitar multas y nuevas demoras</span>.
+                            </div>
+                        </details>
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿Cómo gestionan el cumplimiento de la Resolución Sanitaria?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                Gestionamos la Resolución Sanitaria ante la Seremi de Salud de tu región para asegurar que tu infraestructura cumpla los estándares exigidos. Es un paso <span class="text-red-600 font-semibold">crítico</span> para operar sin riesgos.
+                            </div>
+                        </details>
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                Mi edificio tiene limitaciones físicas, ¿puedo cumplir con la Accesibilidad Universal?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                Sí. Evaluamos técnicamente la viabilidad del proyecto y tramitamos la accesibilidad universal total o parcial ante la DOM para que tu inversión sea <span class="text-red-600 font-semibold">viable y normativa</span>.
+                            </div>
+                        </details>
                     </div>
                 </details>
 
-                <!-- FAQ 2 -->
+                <!-- Arquitectura Habitacional -->
                 <details
                     class="interactive-card bg-gray-50 border border-gray-200 rounded-lg group shadow-sm hover:shadow-md transition-shadow">
                     <summary
                         class="font-semibold text-[18px] p-6 cursor-pointer flex justify-between items-center text-brand-dark">
-                        ¿Cuánto demora en promedio regularizar una ampliación?<span
+                        Arquitectura Habitacional<span
                             class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-2xl">+</span>
                     </summary>
-                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
-                        Bajo las leyes simplificadas actuales (como la Ley del Mono 20.898), el trámite completo —desde
-                        el levantamiento de planos hasta la revisión municipal— puede demorar <b>entre 2 y 4 meses</b>
-                        dependiendo del colapso de la municipalidad. Nuestro valor está en ingresar carpetas 100%
-                        exentas de errores para que no deban ser re-ingresadas.
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed space-y-3">
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿En qué consiste la regularización por "Ley del Mono"?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                Es el proceso de saneamiento bajo la Ley 20.898. Gestionamos el expediente ante la DOM para obtener el Certificado de Recepción Definitiva, clave para vender o hipotecar <span class="text-red-600 font-semibold">sin riesgos</span>.
+                            </div>
+                        </details>
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿Me acompañan en el diseño de mi nuevo hogar?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                Sí. Diseñamos, dibujamos planos y gestionamos la recepción final ante la DOM para que tu proyecto avance con <span class="text-red-600 font-semibold">seguridad legal y técnica</span>.
+                            </div>
+                        </details>
                     </div>
                 </details>
 
-                <!-- FAQ 3 -->
+                <!-- Corretaje Inmobiliario -->
                 <details
                     class="interactive-card bg-gray-50 border border-gray-200 rounded-lg group shadow-sm hover:shadow-md transition-shadow">
                     <summary
                         class="font-semibold text-[18px] p-6 cursor-pointer flex justify-between items-center text-brand-dark">
-                        ¿Qué pasa si mi propiedad está construida fuera de norma?<span
+                        Corretaje Inmobiliario<span
                             class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-2xl">+</span>
                     </summary>
-                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
-                        Nuestra revisión técnica detecta si cumples coeficiente de constructibilidad e instrumentación
-                        <b>antes siquiera de ingresarlo a revisión DOM</b>. Si detectamos un problema estructural que
-                        será rechazado, te propondremos un plan de readecuación específico sin que te cueste cobros
-                        ciegos municipales.
-                    </div>
-                </details>
-
-                <!-- FAQ 4 -->
-                <details
-                    class="interactive-card bg-gray-50 border border-gray-200 rounded-lg group shadow-sm hover:shadow-md transition-shadow">
-                    <summary
-                        class="font-semibold text-[18px] p-6 cursor-pointer flex justify-between items-center text-brand-dark">
-                        ¿Por qué un corredor tradicional no puede venderme rápido?<span
-                            class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-2xl">+</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-700 leading-relaxed">
-                        El 80% de las ventas frustradas en el último paso notarial caen por <b>observaciones
-                            estructurales que el tasador del banco reporta</b>. Un corredor tradicional no entiende el
-                        peso legal de esos certificados. Nosotros operamos en ambos frentes simultáneos: te conseguimos
-                        comprador calificado, pero arreglamos tu propiedad del riesgo antes de presentarlo al banco.
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed space-y-3">
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿Que tipo de servicios inmobiliarios ofrecen?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Ventas (Estoy vendiendo mi casa, departamento, parcela, local comercial, etc.).</li>
+                                    <li>Compras (Quiero comprar una propiedad).</li>
+                                    <li>Arriendo (Estoy arrendando mi propiedad).</li>
+                                    <li>Busca de Arriendo (Busco una propiedad en arriendo).</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿Cuál es la forma de asesoría y trabajo que realizan?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                <ol class="list-decimal pl-5 space-y-3">
+                                    <li>
+                                        <span class="font-semibold text-brand-dark">Preparación estratégica</span>
+                                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                                            <li>Evaluación comercial (precio correcto de mercado).</li>
+                                            <li>Pre-estudio de títulos (seguridad legal).</li>
+                                            <li>Levantamiento de la propiedad.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="font-semibold text-brand-dark">Marketing de alto impacto</span>
+                                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                                            <li>Fotografía y video profesional.</li>
+                                            <li>Publicación en +30 portales.</li>
+                                            <li>Difusión con red de corredores.</li>
+                                            <li>Plan de marketing dirigido (cliente ideal).</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="font-semibold text-brand-dark">Gestión de compradores</span>
+                                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                                            <li>Perfilamiento de interesados.</li>
+                                            <li>Filtro de clientes (evitar riesgos).</li>
+                                            <li>Coordinación de visitas eficientes.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="font-semibold text-brand-dark">Negociación y cierre</span>
+                                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                                            <li>Presentación de ofertas formales.</li>
+                                            <li>Negociación estratégica.</li>
+                                            <li>Promesa de compraventa.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="font-semibold text-brand-dark">Proceso legal y financiero</span>
+                                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                                            <li>Gestión con bancos y abogados.</li>
+                                            <li>Firma de escritura.</li>
+                                            <li>Acompañamiento hasta el final.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </details>
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿Cómo aseguran que la venta de mi propiedad no se caiga?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                Trabajamos con un proceso estructurado y comprobado, donde:
+                                <ul class="list-disc pl-5 space-y-1 mt-2">
+                                    <li>Validamos el precio real de mercado para <span class="text-red-600 font-semibold">evitar pérdidas</span>.</li>
+                                    <li>Filtramos compradores para <span class="text-red-600 font-semibold">reducir riesgos</span>.</li>
+                                    <li>Revisamos aspectos legales antes de vender.</li>
+                                    <li>Te acompañamos hasta la firma final, con respaldo profesional.</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <summary class="font-semibold text-[16px] p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                                ¿Qué servicios técnicos ofrecen para valorizar mi propiedad?
+                                <span class="text-gray-500 group-open:rotate-45 transition-transform duration-300 text-xl">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-gray-700">
+                                Utilizamos herramientas técnicas y análisis de mercado para determinar el valor real, no una estimación al ojo.
+                                <ul class="list-disc pl-5 space-y-1 mt-2">
+                                    <li>Análisis de propiedades similares en venta.</li>
+                                    <li>Comparación por ubicación, metros, estado y características.</li>
+                                    <li>Identificación del precio de equilibrio real.</li>
+                                    <li>Oferta y demanda del sector.</li>
+                                    <li>Tiempo promedio de venta.</li>
+                                    <li>Comportamiento actual del mercado.</li>
+                                    <li>Superficie real y distribución.</li>
+                                    <li>Materialidad y estado.</li>
+                                    <li>Factores que suman o restan valor.</li>
+                                    <li>Situación de títulos.</li>
+                                    <li>Regularizaciones.</li>
+                                    <li>Restricciones.</li>
+                                    <li>Definimos un precio atractivo para generar demanda.</li>
+                                    <li>Buscamos competencia entre compradores.</li>
+                                </ul>
+                            </div>
+                        </details>
                     </div>
                 </details>
             </div>
@@ -439,10 +664,10 @@
         <div
             class="container mx-auto px-6 max-w-4xl animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 relative z-10">
             <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">
-                Agenda tu asesoría y evita errores que pueden <span class="text-red-400">costarte millones</span>
+                Agenda tu asesoría y evita observaciones que pueden <span class="text-red-400">paralizar tu proyecto</span>
             </h2>
             <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                No confíes tu patrimonio en gestores sin peso arquitectónico. Evaluemos tu caso a profundidad.
+                Asesoría educativa, Arquitectura habitacional y corretaje Inmobiliario con respaldo normativo real.
             </p>
             <a href="#"
                 class="pill-btn whatsapp-btn inline-flex items-center gap-3 bg-whatsapp hover-bg-whatsapp text-white px-12 py-5 rounded-full font-bold text-xl shadow-2xl hover:-translate-y-1 transition-all">
@@ -463,10 +688,9 @@
 
         <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12 relative z-10 mb-12">
             <div class="col-span-1 md:col-span-1">
-                <div class="text-white font-semibold text-3xl tracking-wide mb-4">Regulariza<span
-                        class="font-light">PRO</span></div>
-                <p class="text-[16px] leading-relaxed text-gray-300">Arquitectura, tramitación DOM y corretaje libre de
-                    fallos. Protegemos tu inversión inmobiliaria.</p>
+                <div class="text-white font-semibold text-3xl tracking-wide mb-4">LOGOS</div>
+                <p class="text-[16px] leading-relaxed text-gray-300">Infraestructura educativa, tramitación DOM y
+                    corretaje técnico. Protegemos tu inversión inmobiliaria.</p>
                 <div class="mt-8 flex gap-4">
                     <a href="#"
                         class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-whatsapp hover:border-whatsapp text-white transition-all shadow-md">in</a>
@@ -514,7 +738,7 @@
                         <span class="w-2 h-2 rounded-full bg-whatsapp shadow-[0_0_8px_#25D366]"></span>
                         <span class="text-white font-medium">Santiago, Chile</span>
                     </li>
-                    <li class="hover:text-white transition-colors cursor-pointer text-white">contacto@regularizapro.cl
+                    <li class="hover:text-white transition-colors cursor-pointer text-white">contacto@logosarquitectura.cl
                     </li>
                     <li>
                         <a href="#"
@@ -532,7 +756,7 @@
 
         <div
             class="container mx-auto px-6 border-t border-gray-800 pt-8 text-[15px] text-gray-500 text-center md:text-left flex flex-col md:flex-row justify-between relative z-10">
-            <p>&copy; 2026 RegularizaPRO. Elevando el estándar inmobiliario.</p>
+            <p>&copy; 2026 LOGOS ARQUITECTURA. Elevando el estándar inmobiliario.</p>
             <p class="mt-2 md:mt-0">Todos los derechos reservados.</p>
         </div>
     </footer>
