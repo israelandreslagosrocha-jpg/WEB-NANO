@@ -18,37 +18,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true });
   });
 
-  // Manejo del formulario de evaluación en el Hero Section
-  const form = document.getElementById('hero-evaluation-form');
-  if (form) {
+  // Manejo genérico de formularios que envían a WhatsApp
+  document.querySelectorAll('.whatsapp-form').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      const name = document.getElementById('form-name').value.trim();
-      const email = document.getElementById('form-email').value.trim();
-      const clientPhone = document.getElementById('form-phone').value.trim();
-      const project = document.getElementById('form-project').value;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      const customPhone = form.dataset.phone || phone;
+      const formTitle = form.dataset.title || "SOLICITUD DE EVALUACIÓN";
 
-      // Construcción del mensaje para WhatsApp
-      const text = `*NUEVA SOLICITUD DE EVALUACIÓN* 🚀\n\n` +
-                   `*Nombre:* ${name}\n` +
-                   `*Email:* ${email}\n` +
-                   `*Teléfono:* ${clientPhone}\n` +
-                   `*Tipo de proyecto:* ${project}\n\n` +
-                   `Por favor, contáctenme para coordinar la evaluación gratuita.`;
-
-      // Se usa el mismo número principal (phone) y se codifica el texto
-      const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+      // Construcción del mensaje dinámico basado en los campos del formulario
+      let text = `*NUEVA ${formTitle.toUpperCase()}* 🚀\n\n`;
       
-      // Enviar evento a dataLayer (opcional)
+      for (const [key, value] of Object.entries(data)) {
+        if (value) {
+          // Capitalizar la primera letra de la clave para el mensaje
+          const label = key.charAt(0).toUpperCase() + key.slice(1);
+          text += `*${label}:* ${value}\n`;
+        }
+      }
+      
+      text += `\nPor favor, contáctenme para coordinar los siguientes pasos.`;
+
+      const whatsappUrl = `https://wa.me/${customPhone}?text=${encodeURIComponent(text)}`;
+      
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: "form_whatsapp_submit",
-        project_type: project
+        form_id: form.id || 'unnamed_form'
       });
 
-      // Abrir WhatsApp en nueva pestaña
       window.open(whatsappUrl, '_blank');
     });
-  }
+  });
 });
+

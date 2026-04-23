@@ -23,18 +23,32 @@
             j.async = true;
             j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
+        })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX'); // Reemplazar con ID real de GTM
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://logosarquitectura.cl/">
+    <meta property="og:title" content="Asesoría en Infraestructura Educacional en Chile | LOGOS">
+    <meta property="og:description" content="Evita rechazos del Mineduc y asegura la aprobación de tu colegio con expertos en infraestructura escolar.">
+    <meta property="og:image" content="https://res.cloudinary.com/dhgifjpkh/image/upload/v1775945431/INFRAESTRUCTURA_EDUCACIONAL_-_ASESORIA_EDUCACIONAL_sbze9g.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Asesoría en Infraestructura Educacional en Chile | LOGOS">
+    <meta property="twitter:description" content="Evita rechazos del Mineduc y asegura la aprobación de tu colegio con expertos en infraestructura escolar.">
+    <meta property="twitter:image" content="https://res.cloudinary.com/dhgifjpkh/image/upload/v1775945431/INFRAESTRUCTURA_EDUCACIONAL_-_ASESORIA_EDUCACIONAL_sbze9g.png">
+
     <link rel="stylesheet" href="./styles/tailwind.css">
 </head>
 
 <body class="font-sans antialiased text-gray-800 bg-white selection:bg-brand-dark selection:text-white">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+            style="display:none;visibility:hidden"></iframe></noscript> <!-- Reemplazar con ID real de GTM -->
 
     <!-- NAVBAR ELEGANT -->
     <nav id="navbar"
@@ -42,7 +56,7 @@
         <div class="container mx-auto px-6 flex items-center h-full relative">
             <a href="index.html" class="logo-badge flex items-center gap-3">
                 <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1775940389/LOGOS_HORIZONTAL_xon0vh.png"
-                    alt="LOGOS" class="logo-size w-auto transition-transform duration-300 scale-[1.35] origin-center" />
+                    alt="LOGOS Arquitectura Logo" class="logo-size w-auto transition-transform duration-300 origin-center" />
                 <span class="sr-only">LOGOS</span>
             </a>
 
@@ -62,7 +76,7 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden nav-link text-white focus:outline-none mix-blend-difference">
+            <button id="mobile-menu-btn" class="md:hidden nav-link text-white focus:outline-none mix-blend-difference" aria-label="Abrir menú de navegación">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
@@ -110,17 +124,17 @@
                 <!-- Text Container -->
                 <div class="text-left animate-on-scroll opacity-100">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 drop-shadow-xl leading-tight">
-                        Asesoría para proyectos educativos que necesitan aprobación del Mineduc en Chile
+                        Asegura la aprobación de tu proyecto educativo ante el Mineduc en Chile
                     </h1>
                     <p class="text-xl md:text-2xl text-gray-200 font-medium mb-10 drop-shadow-md leading-relaxed">
-                        Evita rechazos, retrasos y pérdidas de dinero. Te guiamos desde el diseño hasta la aprobación oficial de tu establecimiento educacional.
+                        Evita rechazos, retrasos y pérdidas de dinero. Diseñamos y validamos tu proyecto para cumplir con todos los requisitos exigidos.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-5 items-start">
-                        <div class="flex flex-col items-start gap-2">
-                            <a href="#contacto" class="pill-btn bg-whatsapp hover:bg-green-500 text-white px-8 py-4 rounded-full text-lg font-bold shadow-2xl transition-all hover:-translate-y-1 hover:shadow-green-500/30">
-                                Evaluar mi proyecto educativo GRATIS
+                        <div class="flex flex-col items-center sm:items-start gap-2 w-full sm:w-auto">
+                            <a href="#contacto" class="pill-btn w-full bg-whatsapp hover:bg-green-500 text-white px-8 py-4 rounded-full text-lg font-bold shadow-2xl transition-all hover:-translate-y-1 hover:shadow-green-500/30 text-center flex items-center justify-center leading-tight">
+                                Quiero saber si mi proyecto será aprobado
                             </a>
-                            <p class="text-gray-300 text-sm font-medium ml-2 font-bold drop-shadow-md">✨ Respuesta en menos de 24 horas</p>
+                            <p class="text-gray-300 text-sm font-medium ml-0 sm:ml-2 font-bold drop-shadow-md text-center sm:text-left w-full">✨ Evaluación sin compromiso en menos de 24 horas</p>
                         </div>
                         <a href="#proceso" class="pill-btn bg-white/10 hover:bg-white/20 border-2 border-white/40 text-white px-8 py-4 rounded-full text-lg font-bold backdrop-blur-sm transition-all hover:border-white text-center flex items-center justify-center">
                             Ver cómo funciona el proceso
@@ -132,22 +146,22 @@
                 <div class="bg-white rounded-2xl p-6 md:p-10 shadow-2xl max-w-md mx-auto lg:ml-auto w-full border border-gray-100 relative group animate-on-scroll opacity-100 delay-200">
                     <h3 class="text-2xl font-bold text-brand-dark mb-2">Solicita tu evaluación</h3>
                     <p class="text-gray-600 mb-6 font-medium">Análisis gratis de factibilidad normativa.</p>
-                    <form id="hero-evaluation-form" class="space-y-4">
+                    <form id="hero-evaluation-form" class="space-y-4 whatsapp-form" data-title="Evaluación Mineduc">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre completo</label>
-                            <input id="form-name" type="text" placeholder="Ej. Juan Pérez" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-dark/50 transition-all font-medium text-gray-800">
+                            <input id="form-name" name="nombre" type="text" placeholder="Ej. Juan Pérez" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-dark/50 transition-all font-medium text-gray-800">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-1">Correo electrónico</label>
-                            <input id="form-email" type="email" placeholder="ejemplo@correo.com" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-dark/50 transition-all font-medium text-gray-800">
+                            <input id="form-email" name="email" type="email" placeholder="ejemplo@correo.com" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-dark/50 transition-all font-medium text-gray-800">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-1">Teléfono</label>
-                            <input id="form-phone" type="tel" placeholder="Ej. +56 9 1234 5678" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-dark/50 transition-all font-medium text-gray-800">
+                            <input id="form-phone" name="telefono" type="tel" placeholder="Ej. +56 9 1234 5678" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-dark/50 transition-all font-medium text-gray-800">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-1">Tipo de proyecto</label>
-                            <select id="form-project" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-dark/50 transition-all text-gray-700 font-medium cursor-pointer">
+                            <select id="form-project" name="proyecto" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-dark/50 transition-all text-gray-700 font-medium cursor-pointer">
                                 <option value="">Selecciona una opción</option>
                                 <option value="Colegio / Escuela">Colegio / Escuela</option>
                                 <option value="Jardín Infantil">Jardín Infantil</option>
@@ -179,18 +193,14 @@
                 </svg>
             </div>
             <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-8 tracking-tight">
-                Si tu proyecto no cumple, <br class="hidden md:block">
-                <span class="text-red-600">el Mineduc lo rechaza</span>
+                Por qué el Mineduc rechaza proyectos educativos
             </h2>
             <div class="bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-red-50 text-left max-w-3xl mx-auto space-y-6">
                 <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed">
-                    Muchos proyectos educativos fracasan antes de abrir.
+                    Errores en infraestructura, incumplimiento normativo o documentación incompleta son las principales razones por las que los proyectos educativos no son aprobados. Esto puede retrasarte meses o incluso hacerte perder toda la inversión.
                 </p>
-                <p class="text-lg text-gray-600 leading-relaxed">
-                    Errores en infraestructura, normativas mal aplicadas o documentación incompleta pueden retrasar meses tu apertura o incluso hacerte perder toda la inversión.
-                </p>
-                <p class="text-lg text-brand-dark leading-relaxed font-bold">
-                    Sin una asesoría especializada, estás tomando decisiones a ciegas.
+                <p class="text-lg text-brand-dark leading-relaxed font-bold mt-4">
+                    Cada error en tu proyecto puede costarte tiempo, dinero y oportunidades. Sin asesoría especializada, estás avanzando sin saber si cumplirás con los requisitos reales del Mineduc.
                 </p>
             </div>
         </div>
@@ -200,10 +210,9 @@
     <section id="proceso" class="py-24 bg-white border-b border-gray-100">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-6">Te llevamos desde la idea hasta la aprobación</h2>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-6">Te guiamos hasta lograr la aprobación</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Nos especializamos en asesorar proyectos educativos para cumplir con todos los requisitos del Mineduc.<br>
-                    Analizamos tu proyecto, corregimos riesgos y te guiamos paso a paso hasta lograr la aprobación oficial.
+                    Analizamos tu proyecto, detectamos riesgos y te entregamos soluciones claras para cumplir con la normativa educacional en Chile.
                 </p>
             </div>
             
@@ -212,23 +221,19 @@
                 <div class="relative z-10 grid md:grid-cols-4 gap-8">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-white/20 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">1</div>
-                        <h4 class="text-lg font-bold">Diagnóstico</h2>
-                        <p class="text-white/80 mt-2 text-sm">Levantamiento Físico.</p>
+                        <h4 class="text-lg font-bold">Analizamos tu proyecto</h4>
                     </div>
                     <div class="text-center">
                         <div class="w-16 h-16 bg-white/20 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">2</div>
-                        <h4 class="text-lg font-bold">Mitigación</h2>
-                        <p class="text-white/80 mt-2 text-sm">Validamos superficies.</p>
+                        <h4 class="text-lg font-bold">Detectamos errores críticos</h4>
                     </div>
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-whatsapp/40 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">3</div>
-                        <h4 class="text-lg font-bold">Documentos</h2>
-                        <p class="text-white/80 mt-2 text-sm">Expedientes técnicos.</p>
+                        <div class="w-16 h-16 bg-white/20 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">3</div>
+                        <h4 class="text-lg font-bold">Proponemos soluciones</h4>
                     </div>
                     <div class="text-center">
                         <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">4</div>
-                        <h4 class="text-lg font-bold">Reconocimiento</h2>
-                        <p class="text-white/80 mt-2 text-sm">Certificación final.</p>
+                        <h4 class="text-lg font-bold">Te acompañamos hasta aprobación</h4>
                     </div>
                 </div>
             </div>
@@ -251,7 +256,7 @@
                         <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-inner group-hover:bg-indigo-600 group-hover:text-white transition-all">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
-                        <h4 class="text-[22px] font-bold text-brand-dark mb-4 leading-tight group-hover:text-indigo-600 transition-colors">Evaluación de proyecto educativo</h4>
+                        <h4 class="text-[22px] font-bold text-brand-dark mb-4 leading-tight group-hover:text-indigo-600 transition-colors">Evaluación de viabilidad del proyecto educativo</h4>
                         <p class="text-gray-600 text-[16px] mb-6 leading-relaxed flex-grow">Revisamos si tu idea cumple con los requisitos normativos antes de invertir, protegiendo así tu capital.</p>
                         <a href="#contacto" class="flex items-center text-indigo-600 font-bold group-hover:translate-x-2 transition-transform">
                             Más información <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -265,7 +270,7 @@
                         <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-inner group-hover:bg-blue-600 group-hover:text-white transition-all">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                         </div>
-                        <h4 class="text-[22px] font-bold text-brand-dark mb-4 leading-tight group-hover:text-blue-600 transition-colors">Asesoría en infraestructura escolar</h4>
+                        <h4 class="text-[22px] font-bold text-brand-dark mb-4 leading-tight group-hover:text-blue-600 transition-colors">Diseño de infraestructura según normativa Mineduc</h4>
                         <p class="text-gray-600 text-[16px] mb-6 leading-relaxed flex-grow">Diseñamos y ajustamos espacios educacionales según normativa vigente (accesibilidad, superficies, carga de ocupación).</p>
                         <a href="#contacto" class="flex items-center text-blue-600 font-bold group-hover:translate-x-2 transition-transform">
                             Más información <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -279,7 +284,7 @@
                         <div class="w-14 h-14 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mb-6 shadow-inner group-hover:bg-green-600 group-hover:text-white transition-all">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
                         </div>
-                        <h4 class="text-[22px] font-bold text-brand-dark mb-4 leading-tight group-hover:text-green-600 transition-colors">Gestión para reconocimiento oficial</h4>
+                        <h4 class="text-[22px] font-bold text-brand-dark mb-4 leading-tight group-hover:text-green-600 transition-colors">Asesoría completa para reconocimiento oficial</h4>
                         <p class="text-gray-600 text-[16px] mb-6 leading-relaxed flex-grow">Te acompañamos de principio a fin en todo el proceso burocrático ante el Mineduc y MINSAL, para conseguir la acreditación.</p>
                         <a href="#contacto" class="flex items-center text-green-600 font-bold group-hover:translate-x-2 transition-transform">
                             Más información <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -306,49 +311,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN PROCESO / AUTORIDAD -->
-    <section id="autoridad" class="py-24 bg-white border-b border-gray-100">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-brand-dark mb-4">Un proceso claro, sin improvisaciones</h2>
-                <div class="w-16 h-1 bg-brand-dark mx-auto mt-6 rounded"></div>
-            </div>
-            
-            <div class="relative">
-                <!-- Timeline Line -->
-                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-100 -translate-y-1/2 rounded-full"></div>
-                
-                <div class="grid md:grid-cols-4 gap-8 relative z-10">
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-lg text-center hover:-translate-y-2 transition-all">
-                        <div class="w-14 h-14 bg-brand-dark text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-md shadow-brand-dark/30">1</div>
-                        <h4 class="text-xl font-bold text-brand-dark mb-2">Analizamos tu proyecto</h4>
-                        <p class="text-gray-600 text-sm">Revisamos arquitectura, normativas y viabilidad inicial.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-lg text-center hover:-translate-y-2 transition-all">
-                        <div class="w-14 h-14 bg-brand-dark text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-md shadow-brand-dark/30">2</div>
-                        <h4 class="text-xl font-bold text-brand-dark mb-2">Detectamos riesgos</h4>
-                        <p class="text-gray-600 text-sm">Identificamos incumplimientos y posibles objeciones del Mineduc.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-lg text-center hover:-translate-y-2 transition-all">
-                        <div class="w-14 h-14 bg-brand-dark text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-md shadow-brand-dark/30">3</div>
-                        <h4 class="text-xl font-bold text-brand-dark mb-2">Proponemos soluciones</h4>
-                        <p class="text-gray-600 text-sm">Correcciones específicas y elaboración de expedientes técnicos.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border-2 border-brand-dark shadow-xl text-center hover:-translate-y-2 transition-all relative">
-                        <div class="absolute -top-3 -right-3">
-                            <span class="flex h-6 w-6 relative">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-whatsapp opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-6 w-6 bg-whatsapp items-center justify-center text-white text-xs">✓</span>
-                            </span>
-                        </div>
-                        <div class="w-14 h-14 bg-whatsapp text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-md shadow-whatsapp/50">4</div>
-                        <h4 class="text-xl font-bold text-brand-dark mb-2">Aprobación Asegurada</h4>
-                        <p class="text-gray-600 text-sm">Te guiamos hasta lograr tu Reconocimiento Oficial.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- SECCIÓN SERVICIOS SECUNDARIOS -->
     <section id="especialidades" class="relative py-24 bg-gray-50 overflow-hidden border-t border-b border-gray-100">
@@ -700,6 +662,68 @@
                 </svg>
                 Hablar por WhatsApp
             </a>
+        </div>
+    </section>
+    <!-- GUÍA SEO MINEDUC -->
+    <section class="py-24 bg-white border-t border-gray-100" id="guia-normativa">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <span class="text-brand-accent font-bold tracking-widest uppercase text-sm mb-2 block">Guía Informativa</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark tracking-tight">Guía definitiva para la aprobación de proyectos educativos en Chile</h2>
+                <div class="w-16 h-1 bg-brand-dark mx-auto mt-6 rounded"></div>
+            </div>
+
+            <article class="prose prose-lg md:prose-xl prose-blue max-w-none text-gray-600">
+                <p>
+                    Emprender en el sector educativo es un desafío que requiere precisión absoluta. En Chile, el Ministerio de Educación (Mineduc) y el Ministerio de Salud (MINSAL) exigen el cumplimiento de estrictos estándares normativos para otorgar el Reconocimiento Oficial. Sin una <strong>asesoría infraestructura educacional chile</strong> adecuada, los sostenedores e inversionistas enfrentan un alto riesgo de rechazo, retrasos prolongados y cuantiosas pérdidas económicas.
+                </p>
+
+                <h3 class="text-2xl font-bold text-brand-dark mt-10 mb-4">Requisitos del Mineduc para establecimientos educacionales</h3>
+                <p>
+                    Para que un colegio, escuela o jardín infantil pueda operar legalmente y recibir subvenciones, debe obtener el Reconocimiento Oficial del Estado. Este reconocimiento asegura que el establecimiento cumple con las condiciones óptimas para el aprendizaje y la seguridad de los alumnos.
+                </p>
+                <p>
+                    Los requisitos principales se dividen en áreas legales, técnico-pedagógicas y, de manera crítica, la <strong>infraestructura física</strong>. El Mineduc exige que el inmueble cuente con el Permiso de Edificación y la Recepción Definitiva otorgada por la Dirección de Obras Municipales (DOM). Además, se debe cumplir con el coeficiente de constructibilidad, áreas libres mínimas por alumno, y recintos específicos según el nivel educativo (aulas, patios, servicios higiénicos, biblioteca, entre otros).
+                </p>
+
+                <h3 class="text-2xl font-bold text-brand-dark mt-10 mb-4">La normativa de infraestructura escolar: Un pilar fundamental</h3>
+                <p>
+                    La infraestructura escolar en Chile no se basa en el diseño a gusto del propietario; está rígidamente regulada por la Ordenanza General de Urbanismo y Construcciones (OGUC) y decretos específicos del Mineduc (como el Decreto 548, que establece los requisitos de la planta física).
+                </p>
+                <p>
+                    Cada espacio debe cumplir con una <em>carga de ocupación</em> determinada, garantizando metros cuadrados mínimos por estudiante. Asimismo, la <strong>Accesibilidad Universal (Ley 20.422)</strong> es obligatoria: rampas con pendientes normadas, baños para personas con movilidad reducida y rutas accesibles ininterrumpidas. No basta con adaptar una casa grande; el diseño debe concebirse o remodelarse bajo criterios técnicos, acústicos, de ventilación e iluminación muy precisos. Una correcta <strong>asesoría infraestructura educacional chile</strong> te asegura que desde los planos iniciales hasta la ejecución de la obra, cada centímetro cumpla la ley.
+                </p>
+
+                <h3 class="text-2xl font-bold text-brand-dark mt-10 mb-4">Errores comunes que paralizan proyectos educativos</h3>
+                <p>
+                    A lo largo de nuestra experiencia, hemos identificado patrones de fracaso repetitivos en sostenedores que intentan sortear el proceso sin asesoría especializada:
+                </p>
+                <ul class="list-disc pl-6 space-y-3 mb-6">
+                    <li><strong>Comprar o arrendar un terreno no apto:</strong> Muchas veces el Plan Regulador Comunal no permite el uso de suelo para equipamiento educacional en la zona elegida.</li>
+                    <li><strong>Construir antes de aprobar planos:</strong> Realizar ampliaciones sin Permiso de Edificación lleva inevitablemente a multas y exigencias de demolición parcial si la obra no respeta los distanciamientos y rasantes.</li>
+                    <li><strong>Cálculos erróneos de servicios higiénicos:</strong> La normativa exige una cantidad exacta de artefactos sanitarios en función de la matrícula proyectada. Faltar por un lavamanos puede significar el rechazo del expediente.</li>
+                    <li><strong>Ignorar las medidas de mitigación vial:</strong> Dependiendo del tamaño del colegio, la Dirección de Tránsito exigirá estudios de impacto vial (IMIV) que, si no se planifican, traban todo avance.</li>
+                </ul>
+                <p>
+                    Cada observación levantada por las autoridades significa reiniciar procesos burocráticos que pueden demorar entre 3 a 6 meses adicionales, tiempo en el cual el sostenedor sigue pagando arriendos y sueldos sin poder abrir las puertas a sus alumnos.
+                </p>
+
+                <h3 class="text-2xl font-bold text-brand-dark mt-10 mb-4">El proceso de aprobación paso a paso</h3>
+                <p>
+                    Alcanzar el Reconocimiento Oficial no es un trámite de un solo paso, sino un engranaje institucional. El proceso ideal, respaldado por nuestra asesoría, contempla las siguientes fases:
+                </p>
+                <ol class="list-decimal pl-6 space-y-3 mb-6">
+                    <li><strong>Estudio de Cabida y Normativa:</strong> Se realiza un levantamiento arquitectónico y legal del predio para confirmar que es viable albergar el establecimiento.</li>
+                    <li><strong>Anteproyecto y Permiso de Edificación:</strong> Elaboramos y presentamos ante la DOM todos los planos de arquitectura, cálculo estructural e instalaciones (agua, luz, gas) para que el municipio apruebe la obra.</li>
+                    <li><strong>Ejecución y Mitigación:</strong> Se construye bajo estricta supervisión para que lo edificado sea exactamente igual a lo aprobado en los planos.</li>
+                    <li><strong>Recepción Definitiva DOM:</strong> El municipio certifica que la obra terminó conforme a la ley. En paralelo, se obtiene la Resolución Sanitaria del MINSAL.</li>
+                    <li><strong>Expediente Mineduc:</strong> Con todos los documentos técnicos, legales y pedagógicos, se ingresa la solicitud final al Mineduc. Solo tras la visita de los fiscalizadores y la firma de la resolución, el proyecto se convierte en una realidad operativa.</li>
+                </ol>
+
+                <p class="font-bold text-gray-800 mt-8">
+                    No arriesgues tu inversión ni el futuro de cientos de familias. Contar con un aliado técnico es la diferencia entre un sueño truncado por la burocracia y un proyecto educativo exitoso y rentable.
+                </p>
+            </article>
         </div>
     </section>
 
