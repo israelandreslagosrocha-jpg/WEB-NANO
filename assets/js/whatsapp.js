@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.whatsapp-form').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
       const customPhone = form.dataset.phone || phone;
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Construcción del mensaje dinámico basado en los campos del formulario
       let text = `*NUEVA ${formTitle.toUpperCase()}* 🚀\n\n`;
-      
+
       for (const [key, value] of Object.entries(data)) {
         if (value) {
           // Capitalizar la primera letra de la clave para el mensaje
@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
           text += `*${label}:* ${value}\n`;
         }
       }
-      
+
       text += `\nPor favor, contáctenme para coordinar los siguientes pasos.`;
 
       const whatsappUrl = `https://wa.me/${customPhone}?text=${encodeURIComponent(text)}`;
-      
+
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: "form_whatsapp_submit",
