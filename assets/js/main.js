@@ -209,4 +209,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   setHeroNavState(window.scrollY <= 50);
+
+  // Botón Volver Arriba
+  const backToTopBtn = document.createElement('button');
+  backToTopBtn.innerHTML = `
+    <span class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+      </svg>
+      Volver arriba
+    </span>
+  `;
+  backToTopBtn.className = 'fixed bottom-28 right-6 z-40 bg-brand-dark text-white px-5 py-3 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.3)] opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-brand-accent hover:-translate-y-1 font-bold text-sm border border-white/20 flex items-center justify-center';
+  document.body.appendChild(backToTopBtn);
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', () => {
+    // Mostrar cuando el usuario haya bajado 400px o más
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+      backToTopBtn.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+    } else {
+      backToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+      backToTopBtn.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+    }
+  });
 });

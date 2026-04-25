@@ -3,7 +3,7 @@
 
 @layer base {
   :root {
-    --logo-height: 96px;
+    --logo-height: 180px;
   }
 
   body {
@@ -27,14 +27,7 @@
   .logo-badge {
     display: inline-flex;
     align-items: center;
-    padding: 0.05rem 1.8rem;
-    border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    box-shadow: none;
     max-height: 100%;
-    overflow: hidden;
   }
 
   .navbar-center {

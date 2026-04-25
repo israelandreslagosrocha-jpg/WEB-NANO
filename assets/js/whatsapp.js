@@ -1,4 +1,4 @@
-const phone = "56992627252";
+const phone = "56971346301";
 const defaultMessage = "Hola, quiero asesoría técnica y normativa sobre mi propiedad.";
 
 document.addEventListener('DOMContentLoaded', () => {
