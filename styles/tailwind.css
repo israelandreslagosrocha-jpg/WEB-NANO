@@ -1250,6 +1250,9 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .text-\[14px\] {
+    font-size: 14px;
+  }
   .text-\[15px\] {
     font-size: 15px;
   }
@@ -2282,7 +2285,7 @@
 }
 @layer base {
   :root {
-    --logo-height: 180px;
+    --logo-height: 120px;
   }
   body {
     opacity: 0;
@@ -2297,12 +2300,26 @@
 @layer utilities {
   .logo-size {
     height: var(--logo-height);
-    max-height: 100%;
+    max-height: none;
+    max-width: none;
   }
   .logo-badge {
     display: inline-flex;
     align-items: center;
-    max-height: 100%;
+    justify-content: center;
+    height: 84px;
+    width: 230px;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-gray-50);
+    background-color: color-mix(in srgb, #fff 95%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 95%, transparent);
+    }
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .navbar-center {
     position: absolute;
