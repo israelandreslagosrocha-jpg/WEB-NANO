@@ -390,10 +390,10 @@ section[id], main[id] { scroll-margin-top: 7rem; }
 
 /* Keep long institutional names inside their cards on narrow phones. */
 .interactive-card { min-width: 0; }
-.interactive-card h4 { min-width: 0; overflow-wrap: anywhere; }
+.interactive-card :is(h3, h4) { min-width: 0; overflow-wrap: anywhere; }
 @media (max-width: 639px) {
   .interactive-card { padding: 1.25rem; }
-  .interactive-card h4 { font-size: 1.25rem; line-height: 1.35; }
+  .interactive-card :is(h3, h4) { font-size: 1.25rem; line-height: 1.35; }
 }
 
 .text-whatsapp { color: #137c45; }
