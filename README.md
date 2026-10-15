@@ -59,3 +59,26 @@ La dependencia vulnerable `source-map-js` se actualizó mediante lockfile. Ejecu
 GitHub Pages no permite definir aquí todas las cabeceras HTTP de seguridad. CSP/HSTS/otras cabeceras requieren revisar la plataforma o un proxy/CDN. No añadir un archivo `_headers` y asumir que Pages lo aplicará. Pendientes privados: protección de rama, 2FA, colaboradores, secretos históricos, DNS y correo SPF/DKIM/DMARC.
 
 Las imágenes activas usan las URLs WebP proporcionadas. Algunas siguen superando 1 MB: formato WebP no garantiza un presupuesto de transferencia suficiente. Las imágenes adicionales reservadas por el usuario no se utilizan.
+
+## Revisión comercial — 15 de octubre de 2026
+
+Las cuatro páginas principales explican ahora qué aportar en la primera consulta y qué acordar antes de contratar. Los formularios no solicitan el teléfono, porque el contacto continúa en WhatsApp; el correo de portada es opcional. Se retiraron la promesa de respuesta en 24 horas y la aprobación a la primera. Esto no certifica todos los textos normativos históricos: sigue pendiente su revisión profesional, además de perfiles y casos reales autorizados.
+
+## Imágenes responsivas y revisión móvil — 15 de octubre de 2026
+
+Las imágenes usan variantes Cloudinary `f_webp,q_auto:good,c_limit,w_...`; `srcset`/`sizes` permiten elegir según ancho y densidad de pantalla. Las dimensiones originales se consultaron en los metadatos del proveedor. Solo los heroes tienen prioridad alta; las fotografías interiores usan carga diferida. Logo y máscara comparten la variante de 460 px. Los originales no se modificaron.
+
+Muestras de transferencia medidas con curl, respuesta 200 (bytes de archivo, no carga total ni Core Web Vitals):
+
+| Recurso | Original | Variante |
+| --- | ---: | ---: |
+| Infraestructura educacional | 1.714.876 B | 63.472 B a 1280 px |
+| Propiedad de lujo | 2.518.744 B | 161.030 B a 1280 px |
+| Footer | 1.256.574 B | 45.578 B a 1280 px |
+| Logo actual | 357.804 B | 5.332 B a 460 px |
+
+Verificación visual en escritorio y a 320 px; las seis páginas no mostraron desborde horizontal a 320 px tras corregir las tarjetas educacionales. Portada comprobada a 768 px con menú móvil. El navegador eligió una variante de 480 px para el hero en la prueba de 320 px. Las imágenes visibles cargaron correctamente en las comprobaciones. Esto no sustituye una medición Lighthouse ni datos de campo; revisar calidad fotográfica en pantallas de alta densidad antes de publicar.
+
+## Lighthouse móvil — 15 de octubre de 2026
+
+Se ejecutó Lighthouse 13.5.0 con Chrome headless y el perfil móvil predeterminado, con cuatro mediciones locales iniciales y repetición tras los ajustes. Se corrigieron contraste de CTAs y textos de acento, jerarquía de títulos, favicon 404 y la carga de la fuente. Outfit se sirve localmente con licencia SIL OFL en `assets/fonts/OFL.txt`. Cada ejecución es una muestra de laboratorio, no datos de campo ni una garantía de puntuación futura. La validación final en producción incluye Google Ads, ausente de las previsualizaciones locales.

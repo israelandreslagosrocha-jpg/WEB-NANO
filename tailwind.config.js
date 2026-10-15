@@ -13,7 +13,7 @@ module.exports = {
         brand: {
           dark: '#1e2022', // Softer black for premium reading
           light: '#f8f9fa', 
-          accent: '#0d6efd',
+          accent: '#0b5ed7',
         }
       }
     },

@@ -7,6 +7,7 @@ const publicFiles = [
   'index.html', 'asesoria-infraestructura-educacional.html',
   'asesoria-arquitectura-habitacional.html', 'gestion-inmobiliaria.html',
   'servicios.html', 'privacidad.html', 'robots.txt', 'sitemap.xml', 'CNAME',
+  'assets/favicon.svg', 'assets/fonts/outfit-latin.woff2', 'assets/fonts/OFL.txt',
   'styles/tailwind.css', 'assets/js/main.js', 'assets/js/menu.js',
   'assets/js/whatsapp.js', 'assets/js/analytics.js',
 ];

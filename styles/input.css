@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/outfit-latin.woff2") format("woff2");
+}
+
 @layer base {
   :root {
     --logo-height: 120px;
@@ -29,7 +37,7 @@
     align-items: center;
     justify-content: center;
     height: 84px;
-    width: 230px;
+    width: clamp(180px, 58vw, 230px);
     overflow: hidden;
     position: relative;
     flex-shrink: 0;
@@ -46,7 +54,7 @@
   }
 
   .bg-whatsapp {
-    background-color: #25d366;
+    background-color: #137c45;
   }
 
   .hover-bg-whatsapp:hover {
@@ -265,7 +273,7 @@
   }
 
   .footer-photo {
-    background-image: url("https://res.cloudinary.com/dhgifjpkh/image/upload/v1792028861/compressed_footer_jleqrn.webp");
+    background-image: url("https://res.cloudinary.com/dhgifjpkh/image/upload/f_webp,q_auto:good,c_limit,w_1280/v1792028861/compressed_footer_jleqrn.webp");
     background-size: cover;
     background-position: center;
     filter: none;
@@ -364,11 +372,29 @@ section[id], main[id] { scroll-margin-top: 7rem; }
   position: absolute;
   inset: 0;
   background: #fff;
-  mask-image: url("https://res.cloudinary.com/dhgifjpkh/image/upload/v1792032997/compressed_Logos_Arquitectura_en_Blanco_y_Negro_nz0paz.webp");
+  mask-image: url("https://res.cloudinary.com/dhgifjpkh/image/upload/f_webp,q_auto:good,c_limit,w_460/v1792032997/compressed_Logos_Arquitectura_en_Blanco_y_Negro_nz0paz.webp");
   mask-mode: luminance;
   mask-repeat: no-repeat;
   mask-position: center;
-  mask-size: 230px 172.5px;
+  mask-size: 100% auto;
   pointer-events: none;
 }
 #navbar:not(.nav-hero) .logo-badge::before { background: #1e2022; }
+
+@media (max-width: 639px) {
+  #contenido > header h1 { font-size: clamp(2rem, 7.4vw, 2.4rem); }
+  #navbar .logo-badge { min-width: 0; }
+  .whatsapp-form fieldset { min-width: 0; }
+  .whatsapp-form input, .whatsapp-form select { min-width: 0; font-size: 1rem; }
+}
+
+/* Keep long institutional names inside their cards on narrow phones. */
+.interactive-card { min-width: 0; }
+.interactive-card h4 { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 639px) {
+  .interactive-card { padding: 1.25rem; }
+  .interactive-card h4 { font-size: 1.25rem; line-height: 1.35; }
+}
+
+.text-whatsapp { color: #137c45; }
+.text-brand-accent { color: #0b5ed7; }
