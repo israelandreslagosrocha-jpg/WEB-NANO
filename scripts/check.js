@@ -92,23 +92,59 @@ assert.equal(hidden, true);
 assert.equal(attributes['aria-expanded'], 'false');
 assert.equal(focused, true);
 
-// Preview environments must not send requests to Google; production uses the existing Ads ID.
+// Verify both scheduling paths and early contact without making network requests.
 for (const hostname of ['127.0.0.1', 'logosarquitectura.cl']) {
-  const loadedScripts = [];
-  const window = { location: { hostname } };
-  vm.runInNewContext(read('assets/js/analytics.js'), {
-    window,
-    document: {
-      body: { dataset: { service: 'educacional' } },
-      createElement: () => ({}),
-      head: { appendChild: node => loadedScripts.push(node.src) },
-      addEventListener() {},
-    },
-  });
-  assert.equal(loadedScripts.length, hostname === '127.0.0.1' ? 0 : 1);
-  window.logosTrack('contact_click', { channel: 'whatsapp', email: 'private@example.invalid', message: 'private' });
-  const last = window.dataLayer.at(-1);
-  assert.equal(last.event, 'contact_click');
-  assert(!('email' in last) && !('message' in last));
+  for (const supportsIdle of [true, false]) {
+    const loadedScripts = [], listeners = {}, scheduled = [];
+    const window = {
+      location: { hostname },
+      addEventListener: (name, callback) => { listeners[name] = callback; },
+      setTimeout: callback => scheduled.push(callback),
+    };
+    if (supportsIdle) window.requestIdleCallback = (callback, options) => {
+      assert.equal(options.timeout, 1500);
+      scheduled.push(callback);
+    };
+    vm.runInNewContext(read('assets/js/analytics.js'), {
+      window,
+      document: {
+        readyState: 'loading',
+        body: { dataset: { service: 'educacional' } },
+        createElement: () => ({}),
+        head: { appendChild: node => loadedScripts.push(node.src) },
+        addEventListener() {},
+      },
+    });
+    assert.equal(loadedScripts.length, 0, 'No cargar Ads durante los recursos críticos');
+    if (hostname === 'logosarquitectura.cl') {
+      assert.equal(window.dataLayer[1][0], 'config');
+      assert.equal(window.dataLayer[1][1], 'AW-18053973183');
+      listeners.load();
+      assert.equal(loadedScripts.length, 0, 'Esperar el turno programado');
+      scheduled[0]();
+      assert.equal(loadedScripts.length, 1);
+      scheduled[0]();
+      assert.equal(loadedScripts.length, 1, 'No duplicar la etiqueta');
+    }
+    window.logosTrack('contact_click', { channel: 'whatsapp', email: 'private@example.invalid', message: 'private' });
+    const last = window.dataLayer.at(-1);
+    assert.equal(last.event, 'contact_click');
+    assert(!('email' in last) && !('message' in last));
+    assert.equal(loadedScripts.length, hostname === '127.0.0.1' ? 0 : 1);
+  }
 }
-console.log('Menú: Escape/foco/ARIA correctos. Medición: sin etiquetas en localhost y sin campos personales.');
+// A contact action before window.load must start the tag immediately, only once.
+const earlyScripts = [];
+const earlyWindow = { location: { hostname: 'logosarquitectura.cl' }, addEventListener() {} };
+vm.runInNewContext(read('assets/js/analytics.js'), {
+  window: earlyWindow,
+  document: {
+    readyState: 'loading', body: { dataset: { service: 'educacional' } },
+    createElement: () => ({}), head: { appendChild: node => earlyScripts.push(node.src) },
+    addEventListener() {},
+  },
+});
+earlyWindow.logosTrack('contact_click', { channel: 'whatsapp' });
+earlyWindow.logosTrack('contact_click', { channel: 'whatsapp' });
+assert.equal(earlyScripts.length, 1);
+console.log('Medición: carga tras load/idle, alternativa sin idle, contacto temprano y etiqueta única verificados.');

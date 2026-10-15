@@ -82,3 +82,11 @@ Verificación visual en escritorio y a 320 px; las seis páginas no mostraron de
 ## Lighthouse móvil — 15 de octubre de 2026
 
 Se ejecutó Lighthouse 13.5.0 con Chrome headless y el perfil móvil predeterminado, con cuatro mediciones locales iniciales y repetición tras los ajustes. Se corrigieron contraste de CTAs y textos de acento, jerarquía de títulos, favicon 404 y la carga de la fuente. Outfit se sirve localmente con licencia SIL OFL en `assets/fonts/OFL.txt`. Cada ejecución es una muestra de laboratorio, no datos de campo ni una garantía de puntuación futura. La validación final en producción incluye Google Ads, ausente de las previsualizaciones locales.
+
+## Programación de Google Ads — 15 de octubre de 2026
+
+La configuración de la etiqueta se encola al inicio. La librería se solicita tras `window.load`, usando `requestIdleCallback` con timeout de 1500 ms o una tarea posterior si el navegador no ofrece esa API. Una acción de contacto inicia la carga inmediatamente; un guard evita duplicados. No se cambian el ID Ads, cookies ni parámetros de consentimiento.
+
+El retraso puede reducir medición de visitas muy breves o abandonos antes de cargar la etiqueta. Iniciar la carga ante un clic no garantiza enviar datos antes de una navegación inmediata. Los eventos de intención siguen en dataLayer; no representan solicitudes recibidas. La validación de conversiones necesita la configuración real y Tag Assistant/cuenta de Ads. La optimización cambia el momento de carga, no elimina el trabajo que ejecuta Google.
+
+Referencias: https://web.dev/articles/efficiently-load-third-party-javascript y https://developers.google.com/tag-platform/gtagjs. La colocación temprana recomendada por Google favorece cobertura de medición; aquí se adopta un compromiso explícito con el primer renderizado.
