@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/tailwind.css",
-    "dev": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/tailwind.css --watch"
+    "build:css": "tailwindcss -i ./styles/input.css -o ./styles/tailwind.css --minify",
+    "dev": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/tailwind.css --watch",
+    "build": "npm run build:css && node scripts/build.js",
+    "check": "node scripts/check.js"
   },
   "keywords": [],
   "author": "",

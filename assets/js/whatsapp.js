@@ -1,56 +1,46 @@
-const phone = "56971346301";
-const defaultMessage = "Hola, quiero asesoría técnica y normativa sobre mi propiedad.";
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Manejo de botones estáticos de WhatsApp
-  document.querySelectorAll('.whatsapp-btn').forEach(btn => {
-    const customPhone = btn.dataset.phone || phone;
-    const message = btn.dataset.message || defaultMessage;
-    const url = `https://wa.me/${customPhone}?text=${encodeURIComponent(message)}`;
+  const service = document.body.dataset.service || 'educacional';
+  const phone = service === 'inmobiliaria' ? '56961996576' : '56971346301';
+  const messages = {
+    educacional: 'Hola, quiero solicitar una revisión inicial de mi proyecto educacional.',
+    habitacional: 'Hola, necesito asesoría para regularizar mi propiedad.',
+    inmobiliaria: 'Hola, necesito asesoría inmobiliaria.',
+  };
+  const track = (event, dimensions) => window.logosTrack?.(event, dimensions);
+  const placement = element => element.closest('nav') ? 'navigation'
+    : element.closest('footer') ? 'footer'
+    : element.classList.contains('fixed') ? 'floating' : 'content';
 
-    btn.href = url;
-    btn.addEventListener('click', () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "whatsapp_click",
-        whatsapp_message: message,
-      });
-    }, { once: true });
+  document.querySelectorAll('.whatsapp-btn').forEach(button => {
+    const target = button.dataset.phone || phone;
+    const message = button.dataset.message || messages[service] || messages.educacional;
+    button.href = `https://wa.me/${target}?text=${encodeURIComponent(message)}`;
+    button.addEventListener('click', () => track('contact_click', {
+      channel: 'whatsapp', placement: placement(button),
+    }));
   });
 
-  // Manejo genérico de formularios que envían a WhatsApp
   document.querySelectorAll('.whatsapp-form').forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-      const customPhone = form.dataset.phone || phone;
-      const formTitle = form.dataset.title || "SOLICITUD DE EVALUACIÓN";
-
-      // Construcción del mensaje dinámico basado en los campos del formulario
-      let text = `*NUEVA ${formTitle.toUpperCase()}* 🚀\n\n`;
-
-      for (const [key, value] of Object.entries(data)) {
-        if (value) {
-          // Capitalizar la primera letra de la clave para el mensaje
-          const label = key.charAt(0).toUpperCase() + key.slice(1);
-          text += `*${label}:* ${value}\n`;
-        }
+    const status = form.querySelector('[data-form-status]');
+    const fields = form.querySelector('[data-whatsapp-fields]');
+    form.addEventListener('input', () => track('form_start', { form_id: form.id }), { once: true });
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      let message = `SOLICITUD: ${form.dataset.title || 'Revisión inicial'}\n\n`;
+      for (const [key, value] of data.entries()) {
+        const text = String(value).trim().slice(0, 160);
+        if (text) message += `${key.charAt(0).toUpperCase() + key.slice(1)}: ${text}\n`;
       }
-
-      text += `\nPor favor, contáctenme para coordinar los siguientes pasos.`;
-
-      const whatsappUrl = `https://wa.me/${customPhone}?text=${encodeURIComponent(text)}`;
-
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "form_whatsapp_submit",
-        form_id: form.id || 'unnamed_form'
-      });
-
-      window.open(whatsappUrl, '_blank');
+      message += '\nQuiero coordinar los siguientes pasos.';
+      const url = `https://wa.me/${form.dataset.phone || phone}?text=${encodeURIComponent(message)}`;
+      // Same-tab navigation avoids popup blocking; no request is stored by this site.
+      track('whatsapp_handoff', { channel: 'whatsapp', form_id: form.id });
+      if (status) status.textContent = 'Se abrirá WhatsApp. Envía el mensaje allí para completar tu consulta.';
+      window.location.assign(url);
     });
+    // Enable only after the submit handler exists. Without JS no GET can leak fields.
+    if (fields) fields.disabled = false;
   });
 });
-

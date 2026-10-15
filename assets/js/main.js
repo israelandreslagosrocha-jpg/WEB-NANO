@@ -2,25 +2,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Simple intersection observer for fade-in animations
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-  
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('opacity-100', 'translate-y-0');
-        entry.target.classList.remove('opacity-0', 'translate-y-8');
-        observer.unobserve(entry.target);
-      }
+  // Content remains readable without JavaScript or animation observers.
+
+  // Avoid covering form fields with the floating contact link on small screens.
+  const floatingContact = document.querySelector('a.whatsapp-btn.fixed');
+  if (floatingContact && 'IntersectionObserver' in window) {
+    const visibleForms = new Set();
+    const contactObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.isIntersecting
+        ? visibleForms.add(entry.target) : visibleForms.delete(entry.target));
+      floatingContact.classList.toggle('hidden', visibleForms.size > 0);
     });
-  }, observerOptions);
-  
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-  animatedElements.forEach(el => observer.observe(el));
+    document.querySelectorAll('.whatsapp-form').forEach(form => contactObserver.observe(form));
+  }
 
   // Interactive specialty cards
   if (!prefersReducedMotion) {
@@ -127,64 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Hero slider
-  const slides = document.querySelectorAll('.hero-slide');
-  const track = document.querySelector('.hero-slider-track');
-  const prevButton = document.querySelector('.hero-slider-prev');
-  const nextButton = document.querySelector('.hero-slider-next');
-
-  if (slides.length > 0 && track) {
-    let currentIndex = 0;
-    let intervalId = null;
-
-    const showSlide = (index) => {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('is-active', i === index);
-      });
-      track.style.transform = `translateX(-${index * 100}%)`;
-    };
-
-    const nextSlide = () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    };
-
-    const prevSlide = () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(currentIndex);
-    };
-
-    const startAuto = () => {
-      if (prefersReducedMotion) return;
-      intervalId = window.setInterval(nextSlide, 4000);
-    };
-
-    const resetAuto = () => {
-      if (intervalId) {
-        window.clearInterval(intervalId);
-      }
-      startAuto();
-    };
-
-    prevButton?.addEventListener('click', () => {
-      prevSlide();
-      resetAuto();
-    });
-
-    nextButton?.addEventListener('click', () => {
-      nextSlide();
-      resetAuto();
-    });
-
-    showSlide(currentIndex);
-    startAuto();
-  }
+  // The hero uses a single static image to avoid automatic motion and extra downloads.
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       setHeroNavState(false);
-      navbar.classList.add('bg-white', 'shadow-sm');
-      navbar.classList.remove('bg-transparent', 'border-transparent');
+      navbar?.classList.add('bg-white', 'shadow-sm');
+      navbar?.classList.remove('bg-transparent', 'border-transparent');
       navLinks?.forEach(link => {
         link.classList.add('text-gray-800');
         link.classList.remove('text-white');
@@ -195,8 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } else {
       setHeroNavState(true);
-      navbar.classList.add('bg-transparent', 'border-transparent');
-      navbar.classList.remove('bg-white', 'shadow-sm');
+      navbar?.classList.add('bg-transparent', 'border-transparent');
+      navbar?.classList.remove('bg-white', 'shadow-sm');
       navLinks?.forEach(link => {
         link.classList.remove('text-gray-800');
         link.classList.add('text-white');
@@ -224,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(backToTopBtn);
 
   backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
   });
 
   window.addEventListener('scroll', () => {

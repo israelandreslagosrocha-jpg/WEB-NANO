@@ -7,8 +7,7 @@
   }
 
   body {
-    opacity: 0;
-    animation: fadeInBody 0.8s ease-in forwards;
+    opacity: 1;
   }
 }
 
@@ -32,14 +31,14 @@
     height: 84px;
     width: 230px;
     overflow: hidden;
-    @apply bg-white/95 rounded-xl shadow-sm border border-gray-50;
+    position: relative;
+    flex-shrink: 0;
   }
 
   .navbar-center {
-    position: absolute;
-    left: 75%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: static;
+    margin-left: auto;
+    gap: clamp(1rem, 2vw, 2.5rem);
   }
 
   .color-whatsapp {
@@ -266,7 +265,7 @@
   }
 
   .footer-photo {
-    background-image: url("https://res.cloudinary.com/dhgifjpkh/image/upload/v1775261250/footer_ogttmj.png");
+    background-image: url("https://res.cloudinary.com/dhgifjpkh/image/upload/v1792028861/compressed_footer_jleqrn.webp");
     background-size: cover;
     background-position: center;
     filter: none;
@@ -339,3 +338,37 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Keyboard navigation and readable content when scripts fail. */
+:focus-visible { outline: 3px solid #0d6efd !important; outline-offset: 4px; }
+.animate-on-scroll { opacity: 1; transform: none; }
+section[id], main[id] { scroll-margin-top: 7rem; }
+#navbar > div:first-child { justify-content: space-between; gap: 1rem; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  #navbar .navbar-center { display: none; }
+  #mobile-menu-btn { display: inline-flex; }
+  #mobile-menu:not(.hidden) { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+.skip-link { position: fixed; top: -8rem; left: 1rem; z-index: 100; padding: 1rem; color: #fff; background: #1e2022; }
+.skip-link:focus { top: 1rem; }
+
+/* Luminance mask uses the supplied white artwork and makes its black background invisible. */
+.logo-badge .logo-size { opacity: 0; }
+.logo-badge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  mask-image: url("https://res.cloudinary.com/dhgifjpkh/image/upload/v1792032997/compressed_Logos_Arquitectura_en_Blanco_y_Negro_nz0paz.webp");
+  mask-mode: luminance;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 230px 172.5px;
+  pointer-events: none;
+}
+#navbar:not(.nav-hero) .logo-badge::before { background: #1e2022; }
