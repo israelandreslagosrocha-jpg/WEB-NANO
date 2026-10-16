@@ -105,3 +105,6 @@ La propuesta visual independiente está en `prototipo/` y se sirve localmente en
 Portada y tres landings comparten el diseño editorial, con navegación móvil nativa y contactos directos por servicio. Se conservan canonical, metadatos sociales, etiqueta de Google Ads y eventos de contacto sin mensajes personales. Las anclas principales anteriores siguen disponibles.
 
 La sección inmobiliaria presenta a Andrés Lagos como agente de Grupo Premium Propiedades y contacto profesional de LOGOS, con enlace al directorio oficial y formación descrita según el diploma aportado. El diploma no se incluye en los archivos públicos. La cartera incluye ocho fichas proporcionadas por el agente; los precios y disponibilidad requieren mantenimiento manual. Las fotos están optimizadas en `assets/properties/` como WebP (11–53 KB por foto). Para actualizar una propiedad, editar su tarjeta en `gestion-inmobiliaria.html` y la fecha de revisión. Las consultas conservan el código del inmueble en WhatsApp.
+
+### Apoyo técnico-pedagógico — 16 de octubre de 2026
+La landing educacional incorpora una sección complementaria después de los servicios de infraestructura, con tres desplegables y consulta específica por WhatsApp. La disponibilidad, profesional responsable y alcance se confirman antes de contratar; no se publican perfiles pendientes ni promesas de aprobación.
