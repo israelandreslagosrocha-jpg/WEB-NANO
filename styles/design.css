@@ -48,3 +48,10 @@ body[data-area="infraestructura"] .pedagogy-gateway{color:#873d44;border-color:#
 .property-actions a{display:flex;align-items:center;min-height:44px}
 @media(min-width:761px) and (max-width:900px){.navigation{position:relative}.desktop-nav,.nav-cta{display:none}.mobile-menu{display:block}.mobile-menu summary{cursor:pointer;list-style:none;border-bottom:1px solid var(--ink);padding:10px 0}.mobile-menu div{position:absolute;z-index:5;top:108px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:20px 28px;display:grid;gap:16px}}
 @media(max-width:760px){.service-list article{grid-template-columns:26px minmax(0,1fr) 44px}.service-list article>a{width:44px;height:44px}.service-list h3{overflow-wrap:break-word}}
+
+/* Recompose the existing mark: lambda and wordmark share the same visual height. */
+.brand{display:flex;align-items:center}
+.brand-logo{position:relative;height:auto;aspect-ratio:356.383 / 85;background:none;mask:none;-webkit-mask:none}
+.brand-logo::before,.brand-logo::after{content:"";position:absolute;top:0;height:100%;background:var(--ink);mask-image:url('https://res.cloudinary.com/dhgifjpkh/image/upload/f_webp,q_auto:good,c_limit,w_460/v1792032997/compressed_Logos_Arquitectura_en_Blanco_y_Negro_nz0paz.webp');mask-repeat:no-repeat;mask-mode:luminance}
+.brand-logo::before{left:0;width:20.3104%;mask-size:422.01835% 269.53125%;mask-position:10.54131% 47.00461%}
+.brand-logo::after{right:0;width:74.6388%;mask-size:172.93233% 405.88235%;mask-position:84.53608% 55.76923%}
