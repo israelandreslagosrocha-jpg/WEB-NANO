@@ -108,3 +108,6 @@ La sección inmobiliaria presenta a Andrés Lagos como agente de Grupo Premium P
 
 ### Apoyo técnico-pedagógico — 16 de octubre de 2026
 La landing educacional incorpora una sección complementaria después de los servicios de infraestructura, con tres desplegables y consulta específica por WhatsApp. La disponibilidad, profesional responsable y alcance se confirman antes de contratar; no se publican perfiles pendientes ni promesas de aprobación.
+
+### Landing técnico-pedagógica independiente
+`asesoria-tecnico-pedagogica.html` desarrolla consultas sobre documentos institucionales, evaluación/JEC, personal, recursos y observaciones. Se enlaza desde infraestructura educacional y el catálogo de servicios, y se incluye en sitemap y build. Conserva medición de contactos y el criterio de confirmar disponibilidad, responsable y alcance. La sección anterior mantiene su ancla como acceso a la nueva landing.
