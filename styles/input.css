@@ -398,3 +398,5 @@ section[id], main[id] { scroll-margin-top: 7rem; }
 
 .text-whatsapp { color: #137c45; }
 .text-brand-accent { color: #0b5ed7; }
+
+article[id] { scroll-margin-top: 7rem; }

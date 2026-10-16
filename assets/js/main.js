@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // The hero uses a single static image to avoid automatic motion and extra downloads.
 
-  window.addEventListener('scroll', () => {
+  const updateNavbar = () => {
     if (window.scrollY > 50) {
       setHeroNavState(false);
       navbar?.classList.add('bg-white', 'shadow-sm');
@@ -149,9 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
         logoText.classList.add('text-white');
       }
     }
-  });
-
-  setHeroNavState(window.scrollY <= 50);
+  };
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+  window.addEventListener('load', updateNavbar);
+  window.addEventListener('pageshow', updateNavbar);
+  updateNavbar();
 
   // Botón Volver Arriba
   const backToTopBtn = document.createElement('button');

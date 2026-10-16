@@ -6,3 +6,6 @@ fotos/
 
 .env.*
 !.env.example
+
+# Local design proposal; not part of the public release.
+/prototipo/

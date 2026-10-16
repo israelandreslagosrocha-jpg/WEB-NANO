@@ -90,3 +90,13 @@ La configuración de la etiqueta se encola al inicio. La librería se solicita t
 El retraso puede reducir medición de visitas muy breves o abandonos antes de cargar la etiqueta. Iniciar la carga ante un clic no garantiza enviar datos antes de una navegación inmediata. Los eventos de intención siguen en dataLayer; no representan solicitudes recibidas. La validación de conversiones necesita la configuración real y Tag Assistant/cuenta de Ads. La optimización cambia el momento de carga, no elimina el trabajo que ejecuta Google.
 
 Referencias: https://web.dev/articles/efficiently-load-third-party-javascript y https://developers.google.com/tag-platform/gtagjs. La colocación temprana recomendada por Google favorece cobertura de medición; aquí se adopta un compromiso explícito con el primer renderizado.
+
+## Revisión de guías y FAQ
+
+La portada presenta seis preguntas directas sin acordeones anidados. Las guías de portada, habitacional e inmobiliaria se centraron en preparar la consulta y acordar el alcance. Los textos retirados y los puntos de validación están en `docs/REVISION-CONTENIDO.md`, excluido del artefacto público por la lista permitida de compilación. Esta revisión no certifica otras afirmaciones normativas del sitio.
+
+## Revisión visual y propuesta de portada
+
+Se revisaron las cuatro páginas principales en escritorio y móvil, sin desborde horizontal en las muestras de 1280 y 375 px. La cabecera se sincroniza también en load/pageshow para enlaces directos y restauración de navegación. Se retiró la mezcla de color del botón móvil que reducía su contraste.
+
+La propuesta visual independiente está en `prototipo/` y se sirve localmente en el puerto 8766. Está excluida de la lista de publicación y no reemplaza index.html. Es una propuesta editorial con fotografías referenciales, sin métricas de negocio, clientes o perfiles inventados. El menú móvil y los enlaces internos se comprobaron en navegador.
