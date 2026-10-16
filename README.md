@@ -100,3 +100,8 @@ La portada presenta seis preguntas directas sin acordeones anidados. Las guías 
 Se revisaron las cuatro páginas principales en escritorio y móvil, sin desborde horizontal en las muestras de 1280 y 375 px. La cabecera se sincroniza también en load/pageshow para enlaces directos y restauración de navegación. Se retiró la mezcla de color del botón móvil que reducía su contraste.
 
 La propuesta visual independiente está en `prototipo/` y se sirve localmente en el puerto 8766. Está excluida de la lista de publicación y no reemplaza index.html. Es una propuesta editorial con fotografías referenciales, sin métricas de negocio, clientes o perfiles inventados. El menú móvil y los enlaces internos se comprobaron en navegador.
+
+### Rediseño publicado — 16 de octubre de 2026
+Portada y tres landings comparten el diseño editorial, con navegación móvil nativa y contactos directos por servicio. Se conservan canonical, metadatos sociales, etiqueta de Google Ads y eventos de contacto sin mensajes personales. Las anclas principales anteriores siguen disponibles.
+
+La sección inmobiliaria presenta a Andrés Lagos como agente de Grupo Premium Propiedades y contacto profesional de LOGOS, con enlace al directorio oficial y formación descrita según el diploma aportado. El diploma no se incluye en los archivos públicos. La cartera incluye ocho fichas proporcionadas por el agente; los precios y disponibilidad requieren mantenimiento manual. Las fotos están optimizadas en `assets/properties/` como WebP (11–53 KB por foto). Para actualizar una propiedad, editar su tarjeta en `gestion-inmobiliaria.html` y la fecha de revisión. Las consultas conservan el código del inmueble en WhatsApp.

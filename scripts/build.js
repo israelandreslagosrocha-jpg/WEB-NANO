@@ -7,8 +7,8 @@ const publicFiles = [
   'index.html', 'asesoria-infraestructura-educacional.html',
   'asesoria-arquitectura-habitacional.html', 'gestion-inmobiliaria.html',
   'servicios.html', 'privacidad.html', 'robots.txt', 'sitemap.xml', 'CNAME',
-  'assets/favicon.svg', 'assets/fonts/outfit-latin.woff2', 'assets/fonts/OFL.txt',
-  'styles/tailwind.css', 'assets/js/main.js', 'assets/js/menu.js',
+  'assets/favicon.svg', 'assets/properties/77478.webp', 'assets/properties/77555.webp', 'assets/properties/78215.webp', 'assets/properties/78218.webp', 'assets/properties/78690.webp', 'assets/properties/79155.webp', 'assets/properties/79156.webp', 'assets/properties/79157.webp', 'assets/fonts/outfit-latin.woff2', 'assets/fonts/OFL.txt',
+  'styles/tailwind.css', 'styles/design.css', 'assets/js/design.js', 'assets/js/main.js', 'assets/js/menu.js',
   'assets/js/whatsapp.js', 'assets/js/analytics.js',
 ];
 for (const file of publicFiles) {
