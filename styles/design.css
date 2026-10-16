@@ -20,3 +20,22 @@
 .pedagogy-gateway{display:inline-flex;margin-top:25px}
 
 .pedagogy-home-link{display:inline-block;margin-top:22px;color:var(--accent);text-decoration:underline;text-underline-offset:5px;font-size:15px}@media(min-width:761px) and (max-width:1100px){.desktop-nav{gap:14px;font-size:13px}.navigation{gap:16px}.brand{width:160px}.nav-cta{gap:16px;font-size:14px}}
+
+/* Educational areas: pastel surfaces paired with dark, readable accents. */
+body[data-area="infraestructura"]{--paper:#f4f6f1;--ink:#243d32;--muted:#52645a;--line:#cbd8cc;--accent:#35634c;--area-soft:#e0ecdf;--area-band:#d4e5d4;--area-hover:#294e3c;--contact-em:#bad8be}
+body[data-area="pedagogica"]{--paper:#fbf5f3;--ink:#492d30;--muted:#6c5556;--line:#e4cdcd;--accent:#93484e;--area-soft:#f3dfdf;--area-band:#edcece;--area-hover:#74383d;--contact-em:#f0c0c2}
+body[data-area] .discipline{background:var(--area-band);color:var(--ink)}
+body[data-area] .discipline span:first-child{color:var(--accent)}
+body[data-area] .process{background:var(--area-soft)}
+body[data-area] .steps li{border-color:var(--line)}
+body[data-area] .button:not(.light){background:var(--accent);border-color:var(--accent)}
+body[data-area] .button:not(.light):hover{background:var(--area-hover);border-color:var(--area-hover)}
+body[data-area] .contact em{color:var(--contact-em)}
+body[data-area] .light:hover{background:var(--area-soft)}
+body[data-area] .hero .eyebrow{color:var(--accent)}
+body[data-area="infraestructura"] .pedagogical-heading{--accent:#93484e;border-top:3px solid #d8a3a6;background:#f8eaea;padding:32px}
+body[data-area="infraestructura"] .pedagogical-heading>.eyebrow{color:#93484e}
+body[data-area="infraestructura"] .pedagogy-gateway{color:#873d44;border-color:#d8a3a6}
+.pedagogy-home-link{color:#873d44;background:#f3dfdf;padding:12px 16px;border-left:3px solid #bd737a;text-decoration:none}
+.navigation a[href="asesoria-tecnico-pedagogica.html"]{color:#873d44;background:#f3dfdf;padding:7px 10px;border-radius:4px}
+@media(max-width:760px){body[data-area="infraestructura"] .pedagogical-heading{padding:24px}.pedagogy-home-link{font-size:14px}}
