@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const controls = section.querySelector('.testimonials-controls');
     const status = section.querySelector('[data-testimonial-status]');
     const toggle = section.querySelector('[data-testimonial-toggle]');
+    const pagination = section.querySelector('[data-testimonial-pagination]');
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (slides.length < 2) return;
     controls.hidden = false;
@@ -45,11 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
       toggle.textContent = paused ? '▶' : 'Ⅱ';
       toggle.setAttribute('aria-label', paused ? 'Activar cambio automático de testimonios' : 'Pausar cambio automático de testimonios');
     };
-    const move = direction => {
-      const index = (current() + direction + slides.length) % slides.length;
+    const goTo = index => {
       slides.forEach(slide => slide.querySelectorAll('details[open]').forEach(detail => { detail.open = false; }));
       track.scrollTo({ left: index * track.clientWidth, behavior: motion.matches ? 'auto' : 'smooth' });
     };
+    const move = direction => goTo((current() + direction + slides.length) % slides.length);
+    const dots = slides.map((slide, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.setAttribute('aria-label', `Ver recomendación ${index + 1}: ${slide.querySelector('.testimonial-person strong').textContent}`);
+      button.setAttribute('aria-controls', track.id);
+      button.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+      button.addEventListener('click', () => { goTo(index); schedule(); });
+      pagination.appendChild(button);
+      return button;
+    });
+    pagination.hidden = false;
     section.querySelector('[data-testimonial-prev]').addEventListener('click', () => { move(-1); schedule(); });
     section.querySelector('[data-testimonial-next]').addEventListener('click', () => { move(1); schedule(); });
     toggle.addEventListener('click', () => { paused = !paused; updateToggle(); schedule(); });
@@ -63,7 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(entries => { visible = entries[0].isIntersecting; schedule(); }, { threshold: 0.15 }).observe(section);
     } else { visible = true; }
-    track.addEventListener('scroll', () => { status.textContent = `${current() + 1} de ${slides.length}`; }, { passive: true });
+    track.addEventListener('scroll', () => {
+      const index = current();
+      status.textContent = `${index + 1} de ${slides.length}`;
+      dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === index)));
+    }, { passive: true });
     track.addEventListener('keydown', event => {
       if (event.target !== track || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
       event.preventDefault(); move(event.key === 'ArrowRight' ? 1 : -1); schedule();
