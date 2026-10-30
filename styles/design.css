@@ -46,7 +46,7 @@ body[data-area="infraestructura"] .pedagogy-gateway{color:#873d44;border-color:#
 .mobile-menu summary{min-height:44px;display:flex;align-items:center}
 .mobile-menu div a{display:flex;align-items:center;min-height:44px}
 .property-actions a{display:flex;align-items:center;min-height:44px}
-@media(min-width:761px) and (max-width:900px){.navigation{position:relative}.desktop-nav,.nav-cta{display:none}.mobile-menu{display:block}.mobile-menu summary{cursor:pointer;list-style:none;border-bottom:1px solid var(--ink);padding:10px 0}.mobile-menu div{position:absolute;z-index:5;top:108px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:20px 28px;display:grid;gap:16px}}
+@media(min-width:761px) and (max-width:1200px){.navigation{position:relative}.desktop-nav,.nav-cta{display:none}.mobile-menu{display:block}.mobile-menu summary{cursor:pointer;list-style:none;border-bottom:1px solid var(--ink);padding:10px 0}.mobile-menu div{position:absolute;z-index:5;top:108px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:20px 28px;display:grid;gap:16px}}
 @media(max-width:760px){.service-list article{grid-template-columns:26px minmax(0,1fr) 44px}.service-list article>a{width:44px;height:44px}.service-list h3{overflow-wrap:break-word}}
 
 /* Recompose the existing mark: lambda and wordmark share the same visual height. */
