@@ -87,3 +87,14 @@ body[data-area="infraestructura"] .pedagogy-gateway{color:#873d44;border-color:#
 .testimonial-slide{padding-inline:max(48px,calc((100% - 1224px)/2))}
 @media(max-width:1000px){.testimonials-top{padding-inline:28px}.testimonial-slide{padding-inline:28px}}
 @media(max-width:760px){.testimonials-top{padding-inline:22px}.testimonial-slide{padding-inline:22px}.testimonials-track{border-radius:0}}
+
+/* Stronger pastel identity changes with each recommendation. */
+.testimonials-track{background:#dcebdd;border-block:1px solid #b5cdbb;box-shadow:0 12px 32px #243d3210}
+.testimonial-slide{background:radial-gradient(ellipse at 95% 10%,#b7d9c0aa,transparent 50%),linear-gradient(115deg,#d3e7d6,#edf5eb);padding-block:38px}
+.testimonial-slide:nth-child(2){background:radial-gradient(ellipse at 95% 10%,#b7d8dcaa,transparent 50%),linear-gradient(115deg,#d6e8df,#e7f2f0)}
+.testimonial-slide:nth-child(3){background:radial-gradient(ellipse at 95% 10%,#e5d6b0aa,transparent 50%),linear-gradient(115deg,#dce9d3,#f2efdf)}
+.testimonial-mark{padding:8px;border-radius:16px;box-shadow:0 5px 20px #243d3210}
+.testimonial-person strong{color:var(--ink)}
+.testimonial-full summary{font-weight:500}
+.testimonial-excerpt{border-left:3px solid #739d7f;padding-left:20px}
+@media(max-width:760px){.testimonial-slide{padding-block:28px}.testimonial-excerpt{padding-left:14px}.testimonial-mark{padding:5px;border-radius:10px}}
