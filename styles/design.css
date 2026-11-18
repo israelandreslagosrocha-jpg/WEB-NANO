@@ -98,3 +98,37 @@ body[data-area="infraestructura"] .pedagogy-gateway{color:#873d44;border-color:#
 .testimonial-full summary{font-weight:500}
 .testimonial-excerpt{border-left:3px solid #739d7f;padding-left:20px}
 @media(max-width:760px){.testimonial-slide{padding-block:28px}.testimonial-excerpt{padding-left:14px}.testimonial-mark{padding:5px;border-radius:10px}}
+
+/* Give related services a distinct surface and a clear linked card. */
+.other-areas.area-options {
+  width: calc(100% - 44px);
+  max-width: 1224px;
+  margin: 0 auto 64px;
+  padding: clamp(22px, 4vw, 48px);
+  border: 1px solid #ded6c6;
+  border-radius: 18px;
+  background: #eee8dc;
+  color: #26362e;
+}
+.area-options h2 { font-size: clamp(26px, 3vw, 38px); }
+.area-options > div { gap: 16px; }
+.area-options .area-option {
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #d7d1c4;
+  border-radius: 12px;
+  background: #fffdf8;
+}
+.area-option h3 { font-size: 20px; }
+.area-option p { margin-top: 6px; font-size: 15px; color: #4d5c53; }
+.area-option > span {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e3ece2;
+}
+.area-options .area-option:hover { border-color: #728b7b; background: #f5faf4; }
